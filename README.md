@@ -1,5 +1,7 @@
 # owl-schema
 
-my awesome datamodel is for awesome things
+The OWL metamodel converted to LinkML
+
+Docs: https://cmungall.github.io/owl-schema/
 
 
