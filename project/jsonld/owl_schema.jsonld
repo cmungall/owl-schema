@@ -1900,7 +1900,7 @@
   "source_file": "owl_schema.yaml",
   "source_file_date": "2022-08-16T19:35:23",
   "source_file_size": 15715,
-  "generation_date": "2022-08-16T19:36:02",
+  "generation_date": "2022-08-16T19:37:15",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/owl_schema.context.jsonld",

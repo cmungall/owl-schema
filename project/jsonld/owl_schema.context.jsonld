@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from owl_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-08-16T19:36:02\n    Schema: owl\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://www.w3.org/2002/07/owl\n    description: owl\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from owl_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-08-16T19:37:15\n    Schema: owl\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://www.w3.org/2002/07/owl\n    description: owl\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
       "linkml": "https://w3id.org/linkml/",
       "owl": "https://w3id.org/None/",

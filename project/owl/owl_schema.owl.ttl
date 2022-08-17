@@ -17,7 +17,7 @@
         owl1:Resource,
         owl1:Thing ;
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    linkml:generation_date "2022-08-16T19:36:04" ;
+    linkml:generation_date "2022-08-16T19:37:16" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "owl_schema.yaml" ;
     linkml:source_file_date "2022-08-16T19:35:23" ;
@@ -186,14 +186,14 @@ owl1:NegativePropertyAssertion a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "NegativePropertyAssertion" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl1:Property ;
-            owl:onProperty owl1:assertionProperty ],
+            owl:allValuesFrom owl1:Thing ;
+            owl:onProperty owl1:sourceIndividual ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:Thing ;
             owl:onProperty owl1:targetIndividual ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl1:Thing ;
-            owl:onProperty owl1:sourceIndividual ],
+            owl:allValuesFrom owl1:Property ;
+            owl:onProperty owl1:assertionProperty ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:Literal ;
             owl:onProperty owl1:targetValue ],
@@ -227,37 +227,31 @@ owl1:Restriction a owl:Class,
     rdfs:label "Restriction" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty owl1:cardinality ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
             owl:onProperty owl1:maxQualifiedCardinality ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl1:Class ;
-            owl:onProperty owl1:onClass ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl1:List ;
-            owl:onProperty owl1:onProperties ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl1:Class ;
-            owl:onProperty owl1:allValuesFrom ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:Datatype ;
             owl:onProperty owl1:onDataRange ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty owl1:maxCardinality ],
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:onProperties ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl1:Resource ;
-            owl:onProperty owl1:hasValue ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:minQualifiedCardinality ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty owl1:qualifiedCardinality ],
         [ a owl:Restriction ;
-            owl:allValuesFrom owl1:Property ;
-            owl:onProperty owl1:onProperty ],
+            owl:allValuesFrom owl1:Resource ;
+            owl:onProperty owl1:hasValue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Class ;
+            owl:onProperty owl1:onClass ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Class ;
+            owl:onProperty owl1:allValuesFrom ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty owl1:minCardinality ],
+            owl:onProperty owl1:cardinality ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:Class ;
             owl:onProperty owl1:someValuesFrom ],
@@ -266,7 +260,13 @@ owl1:Restriction a owl:Class,
             owl:onProperty owl1:hasSelf ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty owl1:minQualifiedCardinality ],
+            owl:onProperty owl1:maxCardinality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:minCardinality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Property ;
+            owl:onProperty owl1:onProperty ],
         owl1:Class ;
     skos:exactMatch owl1:Restriction ;
     skos:note "The class of property restrictions." .
@@ -659,10 +659,10 @@ owl1:Datatype a owl:Class,
     rdfs:label "Datatype" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom owl1:Datatype ;
-            owl:onProperty owl1:datatypeComplementOf ],
+            owl:onProperty owl1:onDatatype ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:Datatype ;
-            owl:onProperty owl1:onDatatype ],
+            owl:onProperty owl1:datatypeComplementOf ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:List ;
             owl:onProperty owl1:withRestrictions ] .
@@ -699,16 +699,7 @@ owl1:Class a owl:Class,
             owl:onProperty owl1:oneOf ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:List ;
-            owl:onProperty owl1:intersectionOf ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl1:List ;
             owl:onProperty owl1:hasKey ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl1:List ;
-            owl:onProperty owl1:disjointUnionOf ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl1:List ;
-            owl:onProperty owl1:unionOf ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:Class ;
             owl:onProperty owl1:disjointWith ],
@@ -716,8 +707,17 @@ owl1:Class a owl:Class,
             owl:allValuesFrom owl1:Class ;
             owl:onProperty owl1:complementOf ],
         [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:disjointUnionOf ],
+        [ a owl:Restriction ;
             owl:allValuesFrom owl1:Class ;
-            owl:onProperty owl1:equivalentClass ] ;
+            owl:onProperty owl1:equivalentClass ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:intersectionOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:unionOf ] ;
     skos:exactMatch owl1:Class ;
     skos:note "The class of OWL classes." .
 
@@ -725,23 +725,23 @@ owl1:Thing a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Thing" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty owl1:bottomDataProperty ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl1:Thing ;
-            owl:onProperty owl1:bottomObjectProperty ],
-        [ a owl:Restriction ;
             owl:allValuesFrom owl1:Thing ;
             owl:onProperty owl1:sameAs ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Thing ;
+            owl:onProperty owl1:topObjectProperty ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Thing ;
+            owl:onProperty owl1:differentFrom ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:bottomDataProperty ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty owl1:topDataProperty ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:Thing ;
-            owl:onProperty owl1:differentFrom ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom owl1:Thing ;
-            owl:onProperty owl1:topObjectProperty ] ;
+            owl:onProperty owl1:bottomObjectProperty ] ;
     skos:exactMatch owl1:Thing ;
     skos:note "The class of OWL individuals." .
 
@@ -750,13 +750,13 @@ owl1:Resource a owl:Class,
     rdfs:label "Resource" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom owl1:Resource ;
-            owl:onProperty owl1:annotatedSource ],
+            owl:onProperty owl1:annotatedProperty ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:List ;
             owl:onProperty owl1:members ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:Resource ;
-            owl:onProperty owl1:annotatedProperty ],
+            owl:onProperty owl1:annotatedSource ],
         [ a owl:Restriction ;
             owl:allValuesFrom owl1:Resource ;
             owl:onProperty owl1:annotatedTarget ] .

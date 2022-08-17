@@ -1,5 +1,5 @@
 # Auto generated from owl_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-08-16T19:36:07
+# Generation date: 2022-08-16T19:37:20
 # Schema: owl
 #
 # id: http://www.w3.org/2002/07/owl

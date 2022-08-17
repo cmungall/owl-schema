@@ -6,7 +6,15 @@
 owl1:AllDifferent a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class <rdf:List> ;
+    sh:property [ sh:class owl1:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path owl1:annotatedSource ],
+        [ sh:class owl1:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path owl1:annotatedProperty ],
+        [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 0 ;
             sh:path owl1:distinctMembers ],
@@ -14,18 +22,10 @@ owl1:AllDifferent a sh:NodeShape ;
             sh:nodeKind sh:BlankNode ;
             sh:order 3 ;
             sh:path owl1:annotatedTarget ],
-        [ sh:class owl1:Resource ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 2 ;
-            sh:path owl1:annotatedSource ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 4 ;
-            sh:path owl1:members ],
-        [ sh:class owl1:Resource ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:annotatedProperty ] ;
+            sh:path owl1:members ] ;
     sh:targetClass owl1:AllDifferent .
 
 owl1:AllDisjointClasses a sh:NodeShape ;
@@ -33,8 +33,8 @@ owl1:AllDisjointClasses a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:annotatedProperty ],
+            sh:order 1 ;
+            sh:path owl1:annotatedSource ],
         [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
@@ -45,8 +45,8 @@ owl1:AllDisjointClasses a sh:NodeShape ;
             sh:path owl1:members ],
         [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:annotatedSource ] ;
+            sh:order 0 ;
+            sh:path owl1:annotatedProperty ] ;
     sh:targetClass owl1:AllDisjointClasses .
 
 owl1:AllDisjointProperties a sh:NodeShape ;
@@ -54,27 +54,6 @@ owl1:AllDisjointProperties a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:annotatedSource ],
-        [ sh:class owl1:Resource ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 2 ;
-            sh:path owl1:annotatedTarget ],
-        [ sh:class owl1:Resource ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:annotatedProperty ],
-        [ sh:class <rdf:List> ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 3 ;
-            sh:path owl1:members ] ;
-    sh:targetClass owl1:AllDisjointProperties .
-
-owl1:Annotation a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class owl1:Resource ;
-            sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
             sh:path owl1:annotatedTarget ],
         [ sh:class owl1:Resource ;
@@ -89,6 +68,27 @@ owl1:Annotation a sh:NodeShape ;
             sh:nodeKind sh:BlankNode ;
             sh:order 1 ;
             sh:path owl1:annotatedSource ] ;
+    sh:targetClass owl1:AllDisjointProperties .
+
+owl1:Annotation a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class owl1:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path owl1:annotatedProperty ],
+        [ sh:class owl1:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path owl1:annotatedTarget ],
+        [ sh:class owl1:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path owl1:annotatedSource ],
+        [ sh:class <rdf:List> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path owl1:members ] ;
     sh:targetClass owl1:Annotation .
 
 owl1:AnnotationProperty a sh:NodeShape ;
@@ -96,18 +96,22 @@ owl1:AnnotationProperty a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:equivalentProperty ],
+            sh:order 1 ;
+            sh:path owl1:propertyDisjointWith ],
         [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:propertyDisjointWith ] ;
+            sh:order 0 ;
+            sh:path owl1:equivalentProperty ] ;
     sh:targetClass owl1:AnnotationProperty .
 
 owl1:AsymmetricProperty a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class <rdf:Property> ;
+    sh:property [ sh:class <rdf:List> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path owl1:propertyChainAxiom ],
+        [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 3 ;
             sh:path owl1:propertyDisjointWith ],
@@ -115,10 +119,6 @@ owl1:AsymmetricProperty a sh:NodeShape ;
             sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
             sh:path owl1:equivalentProperty ],
-        [ sh:class <rdf:List> ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:propertyChainAxiom ],
         [ sh:class owl1:ObjectProperty ;
             sh:nodeKind sh:BlankNode ;
             sh:order 0 ;
@@ -128,22 +128,22 @@ owl1:AsymmetricProperty a sh:NodeShape ;
 owl1:Axiom a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class <rdf:List> ;
+    sh:property [ sh:class owl1:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path owl1:annotatedSource ],
+        [ sh:class owl1:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path owl1:annotatedProperty ],
+        [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 3 ;
             sh:path owl1:members ],
         [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:annotatedProperty ],
-        [ sh:class owl1:Resource ;
-            sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
-            sh:path owl1:annotatedTarget ],
-        [ sh:class owl1:Resource ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:annotatedSource ] ;
+            sh:path owl1:annotatedTarget ] ;
     sh:targetClass owl1:Axiom .
 
 owl1:DataRange a sh:NodeShape ;
@@ -151,12 +151,12 @@ owl1:DataRange a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class owl1:Datatype ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:onDatatype ],
-        [ sh:class owl1:Datatype ;
-            sh:nodeKind sh:BlankNode ;
             sh:order 0 ;
             sh:path owl1:datatypeComplementOf ],
+        [ sh:class owl1:Datatype ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path owl1:onDatatype ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
@@ -168,37 +168,37 @@ owl1:DatatypeProperty a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:propertyDisjointWith ],
+            sh:order 0 ;
+            sh:path owl1:equivalentProperty ],
         [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:equivalentProperty ] ;
+            sh:order 1 ;
+            sh:path owl1:propertyDisjointWith ] ;
     sh:targetClass owl1:DatatypeProperty .
 
 owl1:DeprecatedClass a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class owl1:Class ;
+    sh:property [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 2 ;
-            sh:path owl1:disjointWith ],
-        [ sh:class owl1:Class ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:complementOf ],
+            sh:order 7 ;
+            sh:path owl1:unionOf ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 1 ;
             sh:path owl1:disjointUnionOf ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 7 ;
-            sh:path owl1:unionOf ],
+            sh:order 5 ;
+            sh:path owl1:intersectionOf ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 4 ;
             sh:path owl1:hasKey ],
+        [ sh:class owl1:Class ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path owl1:disjointWith ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 6 ;
@@ -207,10 +207,10 @@ owl1:DeprecatedClass a sh:NodeShape ;
             sh:nodeKind sh:BlankNode ;
             sh:order 3 ;
             sh:path owl1:equivalentClass ],
-        [ sh:class <rdf:List> ;
+        [ sh:class owl1:Class ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 5 ;
-            sh:path owl1:intersectionOf ] ;
+            sh:order 0 ;
+            sh:path owl1:complementOf ] ;
     sh:targetClass owl1:DeprecatedClass .
 
 owl1:DeprecatedProperty a sh:NodeShape ;
@@ -231,12 +231,12 @@ owl1:FunctionalProperty a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:equivalentProperty ],
+            sh:order 1 ;
+            sh:path owl1:propertyDisjointWith ],
         [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:propertyDisjointWith ] ;
+            sh:order 0 ;
+            sh:path owl1:equivalentProperty ] ;
     sh:targetClass owl1:FunctionalProperty .
 
 owl1:InverseFunctionalProperty a sh:NodeShape ;
@@ -263,22 +263,22 @@ owl1:InverseFunctionalProperty a sh:NodeShape ;
 owl1:IrreflexiveProperty a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class <rdf:List> ;
+    sh:property [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:propertyChainAxiom ],
-        [ sh:class <rdf:Property> ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 2 ;
-            sh:path owl1:equivalentProperty ],
+            sh:order 3 ;
+            sh:path owl1:propertyDisjointWith ],
         [ sh:class owl1:ObjectProperty ;
             sh:nodeKind sh:BlankNode ;
             sh:order 0 ;
             sh:path owl1:inverseOf ],
         [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 3 ;
-            sh:path owl1:propertyDisjointWith ] ;
+            sh:order 2 ;
+            sh:path owl1:equivalentProperty ],
+        [ sh:class <rdf:List> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path owl1:propertyChainAxiom ] ;
     sh:targetClass owl1:IrreflexiveProperty .
 
 owl1:NamedIndividual a sh:NodeShape ;
@@ -290,20 +290,20 @@ owl1:NamedIndividual a sh:NodeShape ;
             sh:path owl1:topObjectProperty ],
         [ sh:order 5 ;
             sh:path owl1:topDataProperty ],
+        [ sh:order 4 ;
+            sh:path owl1:bottomDataProperty ],
         [ sh:class owl1:Thing ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:differentFrom ],
+            sh:order 2 ;
+            sh:path owl1:sameAs ],
         [ sh:class owl1:Thing ;
             sh:nodeKind sh:BlankNode ;
             sh:order 0 ;
             sh:path owl1:bottomObjectProperty ],
         [ sh:class owl1:Thing ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 2 ;
-            sh:path owl1:sameAs ],
-        [ sh:order 4 ;
-            sh:path owl1:bottomDataProperty ] ;
+            sh:order 1 ;
+            sh:path owl1:differentFrom ] ;
     sh:targetClass owl1:NamedIndividual .
 
 owl1:NegativePropertyAssertion a sh:NodeShape ;
@@ -313,18 +313,14 @@ owl1:NegativePropertyAssertion a sh:NodeShape ;
             sh:nodeKind sh:BlankNode ;
             sh:order 5 ;
             sh:path owl1:annotatedSource ],
+        [ sh:class owl1:Thing ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path owl1:sourceIndividual ],
         [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 6 ;
-            sh:path owl1:annotatedTarget ],
-        [ sh:class <rdf:Property> ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:assertionProperty ],
-        [ sh:class <rdf:Literal> ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 3 ;
-            sh:path owl1:targetValue ],
+            sh:order 4 ;
+            sh:path owl1:annotatedProperty ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 7 ;
@@ -335,18 +331,32 @@ owl1:NegativePropertyAssertion a sh:NodeShape ;
             sh:path owl1:targetIndividual ],
         [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 4 ;
-            sh:path owl1:annotatedProperty ],
-        [ sh:class owl1:Thing ;
+            sh:order 6 ;
+            sh:path owl1:annotatedTarget ],
+        [ sh:class <rdf:Literal> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:sourceIndividual ] ;
+            sh:order 3 ;
+            sh:path owl1:targetValue ],
+        [ sh:class <rdf:Property> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path owl1:assertionProperty ] ;
     sh:targetClass owl1:NegativePropertyAssertion .
 
 owl1:Nothing a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:order 5 ;
+    sh:property [ sh:class owl1:Thing ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path owl1:bottomObjectProperty ],
+        [ sh:order 4 ;
+            sh:path owl1:bottomDataProperty ],
+        [ sh:class owl1:Thing ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path owl1:topObjectProperty ],
+        [ sh:order 5 ;
             sh:path owl1:topDataProperty ],
         [ sh:class owl1:Thing ;
             sh:nodeKind sh:BlankNode ;
@@ -354,18 +364,8 @@ owl1:Nothing a sh:NodeShape ;
             sh:path owl1:differentFrom ],
         [ sh:class owl1:Thing ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:bottomObjectProperty ],
-        [ sh:class owl1:Thing ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 3 ;
-            sh:path owl1:topObjectProperty ],
-        [ sh:class owl1:Thing ;
-            sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
-            sh:path owl1:sameAs ],
-        [ sh:order 4 ;
-            sh:path owl1:bottomDataProperty ] ;
+            sh:path owl1:sameAs ] ;
     sh:targetClass owl1:Nothing .
 
 owl1:Ontology a sh:NodeShape ;
@@ -375,6 +375,10 @@ owl1:Ontology a sh:NodeShape ;
             sh:nodeKind sh:BlankNode ;
             sh:order 1 ;
             sh:path owl1:annotatedSource ],
+        [ sh:class owl1:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path owl1:annotatedProperty ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 3 ;
@@ -382,11 +386,7 @@ owl1:Ontology a sh:NodeShape ;
         [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
-            sh:path owl1:annotatedTarget ],
-        [ sh:class owl1:Resource ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:annotatedProperty ] ;
+            sh:path owl1:annotatedTarget ] ;
     sh:targetClass owl1:Ontology .
 
 owl1:OntologyProperty a sh:NodeShape ;
@@ -394,12 +394,12 @@ owl1:OntologyProperty a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:propertyDisjointWith ],
+            sh:order 0 ;
+            sh:path owl1:equivalentProperty ],
         [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:equivalentProperty ] ;
+            sh:order 1 ;
+            sh:path owl1:propertyDisjointWith ] ;
     sh:targetClass owl1:OntologyProperty .
 
 owl1:ReflexiveProperty a sh:NodeShape ;
@@ -409,116 +409,116 @@ owl1:ReflexiveProperty a sh:NodeShape ;
             sh:nodeKind sh:BlankNode ;
             sh:order 3 ;
             sh:path owl1:propertyDisjointWith ],
-        [ sh:class <rdf:List> ;
+        [ sh:class owl1:ObjectProperty ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:propertyChainAxiom ],
+            sh:order 0 ;
+            sh:path owl1:inverseOf ],
         [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
             sh:path owl1:equivalentProperty ],
-        [ sh:class owl1:ObjectProperty ;
+        [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:inverseOf ] ;
+            sh:order 1 ;
+            sh:path owl1:propertyChainAxiom ] ;
     sh:targetClass owl1:ReflexiveProperty .
 
 owl1:Restriction a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:order 11 ;
-            sh:path owl1:minCardinality ],
-        [ sh:order 12 ;
-            sh:path owl1:minQualifiedCardinality ],
-        [ sh:order 10 ;
-            sh:path owl1:maxQualifiedCardinality ],
-        [ sh:class owl1:Class ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 16 ;
-            sh:path owl1:disjointWith ],
-        [ sh:class owl1:Resource ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 2 ;
-            sh:path owl1:hasValue ],
-        [ sh:class owl1:Class ;
+    sh:property [ sh:class owl1:Class ;
             sh:nodeKind sh:BlankNode ;
             sh:order 17 ;
             sh:path owl1:equivalentClass ],
-        [ sh:class <rdf:List> ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 19 ;
-            sh:path owl1:intersectionOf ],
-        [ sh:class <rdf:List> ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 20 ;
-            sh:path owl1:oneOf ],
-        [ sh:order 13 ;
-            sh:path owl1:qualifiedCardinality ],
-        [ sh:class owl1:Class ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:allValuesFrom ],
-        [ sh:order 8 ;
-            sh:path owl1:cardinality ],
+        [ sh:order 11 ;
+            sh:path owl1:minCardinality ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 5 ;
             sh:path owl1:onProperties ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 18 ;
-            sh:path owl1:hasKey ],
+            sh:order 20 ;
+            sh:path owl1:oneOf ],
         [ sh:class owl1:Class ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 14 ;
-            sh:path owl1:complementOf ],
-        [ sh:class owl1:Resource ;
+            sh:order 7 ;
+            sh:path owl1:someValuesFrom ],
+        [ sh:order 12 ;
+            sh:path owl1:minQualifiedCardinality ],
+        [ sh:class owl1:Class ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:hasSelf ],
-        [ sh:class owl1:Datatype ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 4 ;
-            sh:path owl1:onDataRange ],
+            sh:order 0 ;
+            sh:path owl1:allValuesFrom ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 21 ;
             sh:path owl1:unionOf ],
-        [ sh:order 9 ;
-            sh:path owl1:maxCardinality ],
+        [ sh:class owl1:Resource ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path owl1:hasValue ],
+        [ sh:order 10 ;
+            sh:path owl1:maxQualifiedCardinality ],
+        [ sh:class owl1:Class ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 14 ;
+            sh:path owl1:complementOf ],
+        [ sh:class <rdf:List> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 19 ;
+            sh:path owl1:intersectionOf ],
+        [ sh:class owl1:Class ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path owl1:onClass ],
+        [ sh:class <rdf:List> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 15 ;
+            sh:path owl1:disjointUnionOf ],
         [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 6 ;
             sh:path owl1:onProperty ],
         [ sh:class owl1:Class ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 7 ;
-            sh:path owl1:someValuesFrom ],
+            sh:order 16 ;
+            sh:path owl1:disjointWith ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 15 ;
-            sh:path owl1:disjointUnionOf ],
-        [ sh:class owl1:Class ;
+            sh:order 18 ;
+            sh:path owl1:hasKey ],
+        [ sh:order 8 ;
+            sh:path owl1:cardinality ],
+        [ sh:order 9 ;
+            sh:path owl1:maxCardinality ],
+        [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 3 ;
-            sh:path owl1:onClass ] ;
+            sh:order 1 ;
+            sh:path owl1:hasSelf ],
+        [ sh:order 13 ;
+            sh:path owl1:qualifiedCardinality ],
+        [ sh:class owl1:Datatype ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path owl1:onDataRange ] ;
     sh:targetClass owl1:Restriction .
 
 owl1:SymmetricProperty a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class <rdf:Property> ;
+    sh:property [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 2 ;
-            sh:path owl1:equivalentProperty ],
+            sh:order 1 ;
+            sh:path owl1:propertyChainAxiom ],
         [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 3 ;
             sh:path owl1:propertyDisjointWith ],
-        [ sh:class <rdf:List> ;
+        [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:propertyChainAxiom ],
+            sh:order 2 ;
+            sh:path owl1:equivalentProperty ],
         [ sh:class owl1:ObjectProperty ;
             sh:nodeKind sh:BlankNode ;
             sh:order 0 ;
@@ -530,20 +530,20 @@ owl1:TransitiveProperty a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path owl1:propertyDisjointWith ],
+        [ sh:class <rdf:Property> ;
+            sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
             sh:path owl1:equivalentProperty ],
-        [ sh:class owl1:ObjectProperty ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:inverseOf ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 1 ;
             sh:path owl1:propertyChainAxiom ],
-        [ sh:class <rdf:Property> ;
+        [ sh:class owl1:ObjectProperty ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 3 ;
-            sh:path owl1:propertyDisjointWith ] ;
+            sh:order 0 ;
+            sh:path owl1:inverseOf ] ;
     sh:targetClass owl1:TransitiveProperty .
 
 <rdf:Literal> a sh:NodeShape ;
@@ -558,31 +558,31 @@ owl1:Datatype a sh:NodeShape ;
             sh:nodeKind sh:BlankNode ;
             sh:order 0 ;
             sh:path owl1:datatypeComplementOf ],
-        [ sh:class owl1:Datatype ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:onDatatype ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
-            sh:path owl1:withRestrictions ] ;
+            sh:path owl1:withRestrictions ],
+        [ sh:class owl1:Datatype ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path owl1:onDatatype ] ;
     sh:targetClass owl1:Datatype .
 
 owl1:ObjectProperty a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class <rdf:Property> ;
+    sh:property [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 3 ;
-            sh:path owl1:propertyDisjointWith ],
+            sh:order 1 ;
+            sh:path owl1:propertyChainAxiom ],
         [ sh:class owl1:ObjectProperty ;
             sh:nodeKind sh:BlankNode ;
             sh:order 0 ;
             sh:path owl1:inverseOf ],
-        [ sh:class <rdf:List> ;
+        [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:propertyChainAxiom ],
+            sh:order 3 ;
+            sh:path owl1:propertyDisjointWith ],
         [ sh:class <rdf:Property> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
@@ -594,42 +594,46 @@ owl1:Class a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 4 ;
-            sh:path owl1:hasKey ],
-        [ sh:class <rdf:List> ;
-            sh:nodeKind sh:BlankNode ;
             sh:order 6 ;
             sh:path owl1:oneOf ],
-        [ sh:class owl1:Class ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:complementOf ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 7 ;
             sh:path owl1:unionOf ],
-        [ sh:class owl1:Class ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 3 ;
-            sh:path owl1:equivalentClass ],
-        [ sh:class <rdf:List> ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 1 ;
-            sh:path owl1:disjointUnionOf ],
         [ sh:class <rdf:List> ;
             sh:nodeKind sh:BlankNode ;
             sh:order 5 ;
             sh:path owl1:intersectionOf ],
         [ sh:class owl1:Class ;
             sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path owl1:equivalentClass ],
+        [ sh:class owl1:Class ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path owl1:complementOf ],
+        [ sh:class owl1:Class ;
+            sh:nodeKind sh:BlankNode ;
             sh:order 2 ;
-            sh:path owl1:disjointWith ] ;
+            sh:path owl1:disjointWith ],
+        [ sh:class <rdf:List> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 1 ;
+            sh:path owl1:disjointUnionOf ],
+        [ sh:class <rdf:List> ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 4 ;
+            sh:path owl1:hasKey ] ;
     sh:targetClass owl1:Class .
 
 owl1:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:class owl1:Thing ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 2 ;
+            sh:path owl1:sameAs ],
+        [ sh:class owl1:Thing ;
             sh:nodeKind sh:BlankNode ;
             sh:order 0 ;
             sh:path owl1:bottomObjectProperty ],
@@ -641,10 +645,6 @@ owl1:Thing a sh:NodeShape ;
             sh:nodeKind sh:BlankNode ;
             sh:order 1 ;
             sh:path owl1:differentFrom ],
-        [ sh:class owl1:Thing ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 2 ;
-            sh:path owl1:sameAs ],
         [ sh:order 4 ;
             sh:path owl1:bottomDataProperty ],
         [ sh:order 5 ;
@@ -664,12 +664,12 @@ owl1:Resource a sh:NodeShape ;
             sh:path owl1:members ],
         [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 0 ;
-            sh:path owl1:annotatedProperty ],
+            sh:order 2 ;
+            sh:path owl1:annotatedTarget ],
         [ sh:class owl1:Resource ;
             sh:nodeKind sh:BlankNode ;
-            sh:order 2 ;
-            sh:path owl1:annotatedTarget ] ;
+            sh:order 0 ;
+            sh:path owl1:annotatedProperty ] ;
     sh:targetClass owl1:Resource .
 
 <rdf:Property> a sh:NodeShape ;
