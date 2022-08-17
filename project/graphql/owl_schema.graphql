@@ -1,0 +1,263 @@
+type AllDifferent
+  {
+    annotatedProperty: [Resource]
+    annotatedSource: [Resource]
+    annotatedTarget: [Resource]
+    members: [List]
+    distinctMembers: [List]
+  }
+
+type AllDisjointClasses
+  {
+    annotatedProperty: [Resource]
+    annotatedSource: [Resource]
+    annotatedTarget: [Resource]
+    members: [List]
+  }
+
+type AllDisjointProperties
+  {
+    annotatedProperty: [Resource]
+    annotatedSource: [Resource]
+    annotatedTarget: [Resource]
+    members: [List]
+  }
+
+type Annotation
+  {
+    annotatedProperty: [Resource]
+    annotatedSource: [Resource]
+    annotatedTarget: [Resource]
+    members: [List]
+  }
+
+type AnnotationProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+  }
+
+type AsymmetricProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+    inverseOf: [ObjectProperty]
+    propertyChainAxiom: [List]
+  }
+
+type Axiom
+  {
+    annotatedProperty: [Resource]
+    annotatedSource: [Resource]
+    annotatedTarget: [Resource]
+    members: [List]
+  }
+
+type Class
+  {
+    complementOf: [Class]
+    disjointUnionOf: [List]
+    disjointWith: [Class]
+    equivalentClass: [Class]
+    hasKey: [List]
+    intersectionOf: [List]
+    oneOf: [List]
+    unionOf: [List]
+  }
+
+type DataRange
+  {
+    datatypeComplementOf: [Datatype]
+    onDatatype: [Datatype]
+    withRestrictions: [List]
+  }
+
+type Datatype
+  {
+    datatypeComplementOf: [Datatype]
+    onDatatype: [Datatype]
+    withRestrictions: [List]
+  }
+
+type DatatypeProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+  }
+
+type DeprecatedClass
+  {
+    complementOf: [Class]
+    disjointUnionOf: [List]
+    disjointWith: [Class]
+    equivalentClass: [Class]
+    hasKey: [List]
+    intersectionOf: [List]
+    oneOf: [List]
+    unionOf: [List]
+  }
+
+type DeprecatedProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+  }
+
+type FunctionalProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+  }
+
+type InverseFunctionalProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+    inverseOf: [ObjectProperty]
+    propertyChainAxiom: [List]
+  }
+
+type IrreflexiveProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+    inverseOf: [ObjectProperty]
+    propertyChainAxiom: [List]
+  }
+
+type List
+  {
+  }
+
+type Literal
+  {
+  }
+
+type NamedIndividual
+  {
+    bottomObjectProperty: [Thing]
+    differentFrom: [Thing]
+    sameAs: [Thing]
+    topObjectProperty: [Thing]
+    bottomDataProperty: [String]
+    topDataProperty: [String]
+  }
+
+type NegativePropertyAssertion
+  {
+    annotatedProperty: [Resource]
+    annotatedSource: [Resource]
+    annotatedTarget: [Resource]
+    members: [List]
+    assertionProperty: [Property]
+    sourceIndividual: [Thing]
+    targetIndividual: [Thing]
+    targetValue: [Literal]
+  }
+
+type Nothing
+  {
+    bottomObjectProperty: [Thing]
+    differentFrom: [Thing]
+    sameAs: [Thing]
+    topObjectProperty: [Thing]
+    bottomDataProperty: [String]
+    topDataProperty: [String]
+  }
+
+type ObjectProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+    inverseOf: [ObjectProperty]
+    propertyChainAxiom: [List]
+  }
+
+type Ontology
+  {
+    annotatedProperty: [Resource]
+    annotatedSource: [Resource]
+    annotatedTarget: [Resource]
+    members: [List]
+  }
+
+type OntologyProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+  }
+
+type Property
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+  }
+
+type ReflexiveProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+    inverseOf: [ObjectProperty]
+    propertyChainAxiom: [List]
+  }
+
+type Resource
+  {
+    annotatedProperty: [Resource]
+    annotatedSource: [Resource]
+    annotatedTarget: [Resource]
+    members: [List]
+  }
+
+type Restriction
+  {
+    complementOf: [Class]
+    disjointUnionOf: [List]
+    disjointWith: [Class]
+    equivalentClass: [Class]
+    hasKey: [List]
+    intersectionOf: [List]
+    oneOf: [List]
+    unionOf: [List]
+    allValuesFrom: [Class]
+    hasSelf: [Resource]
+    hasValue: [Resource]
+    onClass: [Class]
+    onDataRange: [Datatype]
+    onProperties: [List]
+    onProperty: [Property]
+    someValuesFrom: [Class]
+    cardinality: [String]
+    maxCardinality: [String]
+    maxQualifiedCardinality: [String]
+    minCardinality: [String]
+    minQualifiedCardinality: [String]
+    qualifiedCardinality: [String]
+  }
+
+type SymmetricProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+    inverseOf: [ObjectProperty]
+    propertyChainAxiom: [List]
+  }
+
+type Thing
+  {
+    bottomObjectProperty: [Thing]
+    differentFrom: [Thing]
+    sameAs: [Thing]
+    topObjectProperty: [Thing]
+    bottomDataProperty: [String]
+    topDataProperty: [String]
+  }
+
+type TransitiveProperty
+  {
+    equivalentProperty: [Property]
+    propertyDisjointWith: [Property]
+    inverseOf: [ObjectProperty]
+    propertyChainAxiom: [List]
+  }
+

@@ -1,0 +1,1149 @@
+{
+   "$defs": {
+      "AllDifferent": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "annotatedProperty": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedSource": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedTarget": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "distinctMembers": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "members": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "AllDifferent",
+         "type": "object"
+      },
+      "AllDisjointClasses": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "annotatedProperty": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedSource": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedTarget": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "members": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "AllDisjointClasses",
+         "type": "object"
+      },
+      "AllDisjointProperties": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "annotatedProperty": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedSource": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedTarget": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "members": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "AllDisjointProperties",
+         "type": "object"
+      },
+      "Annotation": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "annotatedProperty": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedSource": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedTarget": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "members": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Annotation",
+         "type": "object"
+      },
+      "AnnotationProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "AnnotationProperty",
+         "type": "object"
+      },
+      "AsymmetricProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "inverseOf": {
+               "items": {
+                  "$ref": "#/$defs/ObjectProperty"
+               },
+               "type": "array"
+            },
+            "propertyChainAxiom": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "AsymmetricProperty",
+         "type": "object"
+      },
+      "Axiom": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "annotatedProperty": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedSource": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedTarget": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "members": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Axiom",
+         "type": "object"
+      },
+      "Class": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "complementOf": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "disjointUnionOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "disjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "equivalentClass": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "hasKey": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "intersectionOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "oneOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "unionOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Class",
+         "type": "object"
+      },
+      "DataRange": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "datatypeComplementOf": {
+               "items": {
+                  "$ref": "#/$defs/Datatype"
+               },
+               "type": "array"
+            },
+            "onDatatype": {
+               "items": {
+                  "$ref": "#/$defs/Datatype"
+               },
+               "type": "array"
+            },
+            "withRestrictions": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "DataRange",
+         "type": "object"
+      },
+      "Datatype": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "datatypeComplementOf": {
+               "items": {
+                  "$ref": "#/$defs/Datatype"
+               },
+               "type": "array"
+            },
+            "onDatatype": {
+               "items": {
+                  "$ref": "#/$defs/Datatype"
+               },
+               "type": "array"
+            },
+            "withRestrictions": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Datatype",
+         "type": "object"
+      },
+      "DatatypeProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "DatatypeProperty",
+         "type": "object"
+      },
+      "DeprecatedClass": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "complementOf": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "disjointUnionOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "disjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "equivalentClass": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "hasKey": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "intersectionOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "oneOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "unionOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "DeprecatedClass",
+         "type": "object"
+      },
+      "DeprecatedProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "DeprecatedProperty",
+         "type": "object"
+      },
+      "FunctionalProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "FunctionalProperty",
+         "type": "object"
+      },
+      "InverseFunctionalProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "inverseOf": {
+               "items": {
+                  "$ref": "#/$defs/ObjectProperty"
+               },
+               "type": "array"
+            },
+            "propertyChainAxiom": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "InverseFunctionalProperty",
+         "type": "object"
+      },
+      "IrreflexiveProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "inverseOf": {
+               "items": {
+                  "$ref": "#/$defs/ObjectProperty"
+               },
+               "type": "array"
+            },
+            "propertyChainAxiom": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "IrreflexiveProperty",
+         "type": "object"
+      },
+      "List": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {},
+         "required": [],
+         "title": "List",
+         "type": "object"
+      },
+      "Literal": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {},
+         "required": [],
+         "title": "Literal",
+         "type": "object"
+      },
+      "NamedIndividual": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "bottomDataProperty": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "bottomObjectProperty": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "differentFrom": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "sameAs": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "topDataProperty": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "topObjectProperty": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "NamedIndividual",
+         "type": "object"
+      },
+      "NegativePropertyAssertion": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "annotatedProperty": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedSource": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedTarget": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "assertionProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "members": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "sourceIndividual": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "targetIndividual": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "targetValue": {
+               "items": {
+                  "$ref": "#/$defs/Literal"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "NegativePropertyAssertion",
+         "type": "object"
+      },
+      "Nothing": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "bottomDataProperty": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "bottomObjectProperty": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "differentFrom": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "sameAs": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "topDataProperty": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "topObjectProperty": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Nothing",
+         "type": "object"
+      },
+      "ObjectProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "inverseOf": {
+               "items": {
+                  "$ref": "#/$defs/ObjectProperty"
+               },
+               "type": "array"
+            },
+            "propertyChainAxiom": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "ObjectProperty",
+         "type": "object"
+      },
+      "Ontology": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "annotatedProperty": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedSource": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedTarget": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "members": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Ontology",
+         "type": "object"
+      },
+      "OntologyProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "OntologyProperty",
+         "type": "object"
+      },
+      "Property": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Property",
+         "type": "object"
+      },
+      "ReflexiveProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "inverseOf": {
+               "items": {
+                  "$ref": "#/$defs/ObjectProperty"
+               },
+               "type": "array"
+            },
+            "propertyChainAxiom": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "ReflexiveProperty",
+         "type": "object"
+      },
+      "Resource": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "annotatedProperty": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedSource": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "annotatedTarget": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "members": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Resource",
+         "type": "object"
+      },
+      "Restriction": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "allValuesFrom": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "cardinality": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "complementOf": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "disjointUnionOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "disjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "equivalentClass": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "hasKey": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "hasSelf": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "hasValue": {
+               "items": {
+                  "$ref": "#/$defs/Resource"
+               },
+               "type": "array"
+            },
+            "intersectionOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "maxCardinality": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "maxQualifiedCardinality": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "minCardinality": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "minQualifiedCardinality": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "onClass": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "onDataRange": {
+               "items": {
+                  "$ref": "#/$defs/Datatype"
+               },
+               "type": "array"
+            },
+            "onProperties": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "onProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "oneOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "qualifiedCardinality": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "someValuesFrom": {
+               "items": {
+                  "$ref": "#/$defs/Class"
+               },
+               "type": "array"
+            },
+            "unionOf": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Restriction",
+         "type": "object"
+      },
+      "SymmetricProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "inverseOf": {
+               "items": {
+                  "$ref": "#/$defs/ObjectProperty"
+               },
+               "type": "array"
+            },
+            "propertyChainAxiom": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "SymmetricProperty",
+         "type": "object"
+      },
+      "Thing": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "bottomDataProperty": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "bottomObjectProperty": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "differentFrom": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "sameAs": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            },
+            "topDataProperty": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "topObjectProperty": {
+               "items": {
+                  "$ref": "#/$defs/Thing"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "Thing",
+         "type": "object"
+      },
+      "TransitiveProperty": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "equivalentProperty": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            },
+            "inverseOf": {
+               "items": {
+                  "$ref": "#/$defs/ObjectProperty"
+               },
+               "type": "array"
+            },
+            "propertyChainAxiom": {
+               "items": {
+                  "$ref": "#/$defs/List"
+               },
+               "type": "array"
+            },
+            "propertyDisjointWith": {
+               "items": {
+                  "$ref": "#/$defs/Property"
+               },
+               "type": "array"
+            }
+         },
+         "required": [],
+         "title": "TransitiveProperty",
+         "type": "object"
+      }
+   },
+   "$id": "http://www.w3.org/2002/07/owl",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": true,
+   "metamodel_version": "1.7.0",
+   "properties": {
+      "annotatedProperty": {
+         "items": {
+            "$ref": "#/$defs/Resource"
+         },
+         "type": "array"
+      },
+      "annotatedSource": {
+         "items": {
+            "$ref": "#/$defs/Resource"
+         },
+         "type": "array"
+      },
+      "annotatedTarget": {
+         "items": {
+            "$ref": "#/$defs/Resource"
+         },
+         "type": "array"
+      },
+      "members": {
+         "items": {
+            "$ref": "#/$defs/List"
+         },
+         "type": "array"
+      }
+   },
+   "required": [],
+   "title": "owl",
+   "type": "object",
+   "version": null
+}

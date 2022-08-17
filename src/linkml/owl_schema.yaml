@@ -1,0 +1,554 @@
+id: http://www.w3.org/2002/07/owl
+name: owl
+description: owl
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  owl: https://w3id.org/None/
+default_prefix: owl
+slots:
+  domain:
+    slot_uri: rdfs:domain
+    multivalued: true
+  member:
+    slot_uri: rdfs:member
+    multivalued: true
+  range:
+    slot_uri: rdfs:range
+    multivalued: true
+  subClassOf:
+    slot_uri: rdfs:subClassOf
+    multivalued: true
+  subPropertyOf:
+    slot_uri: rdfs:subPropertyOf
+    multivalued: true
+  allValuesFrom:
+    comments:
+    - The property that determines the class that a universal property restriction
+      refers to.
+    slot_uri: owl:allValuesFrom
+    multivalued: true
+    range: Class
+  annotatedProperty:
+    comments:
+    - The property that determines the predicate of an annotated axiom or annotated
+      annotation.
+    slot_uri: owl:annotatedProperty
+    multivalued: true
+    range: Resource
+  annotatedSource:
+    comments:
+    - The property that determines the subject of an annotated axiom or annotated
+      annotation.
+    slot_uri: owl:annotatedSource
+    multivalued: true
+    range: Resource
+  annotatedTarget:
+    comments:
+    - The property that determines the object of an annotated axiom or annotated annotation.
+    slot_uri: owl:annotatedTarget
+    multivalued: true
+    range: Resource
+  assertionProperty:
+    comments:
+    - The property that determines the predicate of a negative property assertion.
+    slot_uri: owl:assertionProperty
+    multivalued: true
+    range: Property
+  bottomObjectProperty:
+    comments:
+    - The object property that does not relate any two individuals.
+    slot_uri: owl:bottomObjectProperty
+    multivalued: true
+    range: Thing
+  complementOf:
+    comments:
+    - The property that determines that a given class is the complement of another
+      class.
+    slot_uri: owl:complementOf
+    multivalued: true
+    range: Class
+  datatypeComplementOf:
+    comments:
+    - The property that determines that a given data range is the complement of another
+      data range with respect to the data domain.
+    slot_uri: owl:datatypeComplementOf
+    multivalued: true
+    range: Datatype
+  differentFrom:
+    comments:
+    - The property that determines that two given individuals are different.
+    slot_uri: owl:differentFrom
+    multivalued: true
+    range: Thing
+  disjointUnionOf:
+    comments:
+    - The property that determines that a given class is equivalent to the disjoint
+      union of a collection of other classes.
+    slot_uri: owl:disjointUnionOf
+    multivalued: true
+    range: List
+  disjointWith:
+    comments:
+    - The property that determines that two given classes are disjoint.
+    slot_uri: owl:disjointWith
+    multivalued: true
+    range: Class
+  distinctMembers:
+    comments:
+    - The property that determines the collection of pairwise different individuals
+      in a owl:AllDifferent axiom.
+    slot_uri: owl:distinctMembers
+    multivalued: true
+    range: List
+  equivalentClass:
+    comments:
+    - The property that determines that two given classes are equivalent, and that
+      is used to specify datatype definitions.
+    slot_uri: owl:equivalentClass
+    multivalued: true
+    range: Class
+  equivalentProperty:
+    comments:
+    - The property that determines that two given properties are equivalent.
+    slot_uri: owl:equivalentProperty
+    multivalued: true
+    range: Property
+  hasKey:
+    comments:
+    - The property that determines the collection of properties that jointly build
+      a key.
+    slot_uri: owl:hasKey
+    multivalued: true
+    range: List
+  hasSelf:
+    comments:
+    - The property that determines the property that a self restriction refers to.
+    slot_uri: owl:hasSelf
+    multivalued: true
+    range: Resource
+  hasValue:
+    comments:
+    - The property that determines the individual that a has-value restriction refers
+      to.
+    slot_uri: owl:hasValue
+    multivalued: true
+    range: Resource
+  intersectionOf:
+    comments:
+    - The property that determines the collection of classes or data ranges that build
+      an intersection.
+    slot_uri: owl:intersectionOf
+    multivalued: true
+    range: List
+  inverseOf:
+    comments:
+    - The property that determines that two given properties are inverse.
+    slot_uri: owl:inverseOf
+    multivalued: true
+    range: ObjectProperty
+  members:
+    comments:
+    - The property that determines the collection of members in either a owl:AllDifferent,
+      owl:AllDisjointClasses or owl:AllDisjointProperties axiom.
+    slot_uri: owl:members
+    multivalued: true
+    range: List
+  onClass:
+    comments:
+    - The property that determines the class that a qualified object cardinality restriction
+      refers to.
+    slot_uri: owl:onClass
+    multivalued: true
+    range: Class
+  onDataRange:
+    comments:
+    - The property that determines the data range that a qualified data cardinality
+      restriction refers to.
+    slot_uri: owl:onDataRange
+    multivalued: true
+    range: Datatype
+  onDatatype:
+    comments:
+    - The property that determines the datatype that a datatype restriction refers
+      to.
+    slot_uri: owl:onDatatype
+    multivalued: true
+    range: Datatype
+  onProperties:
+    comments:
+    - The property that determines the n-tuple of properties that a property restriction
+      on an n-ary data range refers to.
+    slot_uri: owl:onProperties
+    multivalued: true
+    range: List
+  onProperty:
+    comments:
+    - The property that determines the property that a property restriction refers
+      to.
+    slot_uri: owl:onProperty
+    multivalued: true
+    range: Property
+  oneOf:
+    comments:
+    - The property that determines the collection of individuals or data values that
+      build an enumeration.
+    slot_uri: owl:oneOf
+    multivalued: true
+    range: List
+  propertyChainAxiom:
+    comments:
+    - The property that determines the n-tuple of properties that build a sub property
+      chain of a given property.
+    slot_uri: owl:propertyChainAxiom
+    multivalued: true
+    range: List
+  propertyDisjointWith:
+    comments:
+    - The property that determines that two given properties are disjoint.
+    slot_uri: owl:propertyDisjointWith
+    multivalued: true
+    range: Property
+  sameAs:
+    comments:
+    - The property that determines that two given individuals are equal.
+    slot_uri: owl:sameAs
+    multivalued: true
+    range: Thing
+  someValuesFrom:
+    comments:
+    - The property that determines the class that an existential property restriction
+      refers to.
+    slot_uri: owl:someValuesFrom
+    multivalued: true
+    range: Class
+  sourceIndividual:
+    comments:
+    - The property that determines the subject of a negative property assertion.
+    slot_uri: owl:sourceIndividual
+    multivalued: true
+    range: Thing
+  targetIndividual:
+    comments:
+    - The property that determines the object of a negative object property assertion.
+    slot_uri: owl:targetIndividual
+    multivalued: true
+    range: Thing
+  targetValue:
+    comments:
+    - The property that determines the value of a negative data property assertion.
+    slot_uri: owl:targetValue
+    multivalued: true
+    range: Literal
+  topObjectProperty:
+    comments:
+    - The object property that relates every two individuals.
+    slot_uri: owl:topObjectProperty
+    multivalued: true
+    range: Thing
+  unionOf:
+    comments:
+    - The property that determines the collection of classes or data ranges that build
+      a union.
+    slot_uri: owl:unionOf
+    multivalued: true
+    range: List
+  withRestrictions:
+    comments:
+    - The property that determines the collection of facet-value pairs that define
+      a datatype restriction.
+    slot_uri: owl:withRestrictions
+    multivalued: true
+    range: List
+  bottomDataProperty:
+    comments:
+    - The data property that does not relate any individual to any data value.
+    slot_uri: owl:bottomDataProperty
+    multivalued: true
+  cardinality:
+    comments:
+    - The property that determines the cardinality of an exact cardinality restriction.
+    slot_uri: owl:cardinality
+    multivalued: true
+  maxCardinality:
+    comments:
+    - The property that determines the cardinality of a maximum cardinality restriction.
+    slot_uri: owl:maxCardinality
+    multivalued: true
+  maxQualifiedCardinality:
+    comments:
+    - The property that determines the cardinality of a maximum qualified cardinality
+      restriction.
+    slot_uri: owl:maxQualifiedCardinality
+    multivalued: true
+  minCardinality:
+    comments:
+    - The property that determines the cardinality of a minimum cardinality restriction.
+    slot_uri: owl:minCardinality
+    multivalued: true
+  minQualifiedCardinality:
+    comments:
+    - The property that determines the cardinality of a minimum qualified cardinality
+      restriction.
+    slot_uri: owl:minQualifiedCardinality
+    multivalued: true
+  qualifiedCardinality:
+    comments:
+    - The property that determines the cardinality of an exact qualified cardinality
+      restriction.
+    slot_uri: owl:qualifiedCardinality
+    multivalued: true
+  topDataProperty:
+    comments:
+    - The data property that relates every individual to every data value.
+    slot_uri: owl:topDataProperty
+    multivalued: true
+  title:
+    slot_uri: http://purl.org/dc/elements/1.1/title
+    multivalued: true
+  backwardCompatibleWith:
+    comments:
+    - The annotation property that indicates that a given ontology is backward compatible
+      with another ontology.
+    slot_uri: owl:backwardCompatibleWith
+    multivalued: true
+    range: Ontology
+  deprecated:
+    comments:
+    - The annotation property that indicates that a given entity has been deprecated.
+    slot_uri: owl:deprecated
+    multivalued: true
+    range: Resource
+  imports:
+    comments:
+    - The property that is used for importing other ontologies into a given ontology.
+    slot_uri: owl:imports
+    multivalued: true
+    range: Ontology
+  incompatibleWith:
+    comments:
+    - The annotation property that indicates that a given ontology is incompatible
+      with another ontology.
+    slot_uri: owl:incompatibleWith
+    multivalued: true
+    range: Ontology
+  priorVersion:
+    comments:
+    - The annotation property that indicates the predecessor ontology of a given ontology.
+    slot_uri: owl:priorVersion
+    multivalued: true
+    range: Ontology
+  versionIRI:
+    comments:
+    - The property that identifies the version IRI of an ontology.
+    slot_uri: owl:versionIRI
+    multivalued: true
+    range: Ontology
+  versionInfo:
+    comments:
+    - The annotation property that provides version information for an ontology or
+      another OWL construct.
+    slot_uri: owl:versionInfo
+    multivalued: true
+    range: Resource
+  namespaceTransformation:
+    slot_uri: http://www.w3.org/2003/g/data-view#namespaceTransformation
+    multivalued: true
+classes:
+  Literal:
+    class_uri: rdf:Literal
+  List:
+    class_uri: rdf:List
+  Property:
+    slots:
+    - equivalentProperty
+    - propertyDisjointWith
+    class_uri: rdf:Property
+  AllDifferent:
+    comments:
+    - The class of collections of pairwise different individuals.
+    is_a: Resource
+    slots:
+    - distinctMembers
+    class_uri: owl:AllDifferent
+  AllDisjointClasses:
+    comments:
+    - The class of collections of pairwise disjoint classes.
+    is_a: Resource
+    class_uri: owl:AllDisjointClasses
+  AllDisjointProperties:
+    comments:
+    - The class of collections of pairwise disjoint properties.
+    is_a: Resource
+    class_uri: owl:AllDisjointProperties
+  Annotation:
+    comments:
+    - The class of annotated annotations for which the RDF serialization consists
+      of an annotated subject, predicate and object.
+    is_a: Resource
+    class_uri: owl:Annotation
+  AnnotationProperty:
+    comments:
+    - The class of annotation properties.
+    is_a: Property
+    class_uri: owl:AnnotationProperty
+  AsymmetricProperty:
+    comments:
+    - The class of asymmetric properties.
+    is_a: ObjectProperty
+    class_uri: owl:AsymmetricProperty
+  Axiom:
+    comments:
+    - The class of annotated axioms for which the RDF serialization consists of an
+      annotated subject, predicate and object.
+    is_a: Resource
+    class_uri: owl:Axiom
+  Class:
+    comments:
+    - The class of OWL classes.
+    #is_a: Class
+    slots:
+    - complementOf
+    - disjointUnionOf
+    - disjointWith
+    - equivalentClass
+    - hasKey
+    - intersectionOf
+    - oneOf
+    - unionOf
+    class_uri: owl:Class
+  DataRange:
+    comments:
+    - 'The class of OWL data ranges, which are special kinds of datatypes. Note: The
+      use of the IRI owl:DataRange has been deprecated as of OWL 2. The IRI rdfs:Datatype
+      SHOULD be used instead.'
+    is_a: Datatype
+    class_uri: owl:DataRange
+  DatatypeProperty:
+    comments:
+    - The class of data properties.
+    is_a: Property
+    class_uri: owl:DatatypeProperty
+  DeprecatedClass:
+    comments:
+    - The class of deprecated classes.
+    is_a: Class
+    class_uri: owl:DeprecatedClass
+  DeprecatedProperty:
+    comments:
+    - The class of deprecated properties.
+    is_a: Property
+    class_uri: owl:DeprecatedProperty
+  FunctionalProperty:
+    comments:
+    - The class of functional properties.
+    is_a: Property
+    class_uri: owl:FunctionalProperty
+  InverseFunctionalProperty:
+    comments:
+    - The class of inverse-functional properties.
+    is_a: ObjectProperty
+    class_uri: owl:InverseFunctionalProperty
+  IrreflexiveProperty:
+    comments:
+    - The class of irreflexive properties.
+    is_a: ObjectProperty
+    class_uri: owl:IrreflexiveProperty
+  NamedIndividual:
+    comments:
+    - The class of named individuals.
+    is_a: Thing
+    class_uri: owl:NamedIndividual
+  NegativePropertyAssertion:
+    comments:
+    - The class of negative property assertions.
+    is_a: Resource
+    slots:
+    - assertionProperty
+    - sourceIndividual
+    - targetIndividual
+    - targetValue
+    class_uri: owl:NegativePropertyAssertion
+  Nothing:
+    comments:
+    - This is the empty class.
+    is_a: Thing
+    class_uri: owl:Nothing
+  ObjectProperty:
+    comments:
+    - The class of object properties.
+    is_a: Property
+    slots:
+    - inverseOf
+    - propertyChainAxiom
+    class_uri: owl:ObjectProperty
+  Ontology:
+    comments:
+    - The class of ontologies.
+    is_a: Resource
+    class_uri: owl:Ontology
+    tree_root: true
+  OntologyProperty:
+    comments:
+    - The class of ontology properties.
+    is_a: Property
+    class_uri: owl:OntologyProperty
+  ReflexiveProperty:
+    comments:
+    - The class of reflexive properties.
+    is_a: ObjectProperty
+    class_uri: owl:ReflexiveProperty
+  Restriction:
+    comments:
+    - The class of property restrictions.
+    is_a: Class
+    slots:
+    - allValuesFrom
+    - hasSelf
+    - hasValue
+    - onClass
+    - onDataRange
+    - onProperties
+    - onProperty
+    - someValuesFrom
+    - cardinality
+    - maxCardinality
+    - maxQualifiedCardinality
+    - minCardinality
+    - minQualifiedCardinality
+    - qualifiedCardinality
+    class_uri: owl:Restriction
+  SymmetricProperty:
+    comments:
+    - The class of symmetric properties.
+    is_a: ObjectProperty
+    class_uri: owl:SymmetricProperty
+  Thing:
+    comments:
+    - The class of OWL individuals.
+    slots:
+    - bottomObjectProperty
+    - differentFrom
+    - sameAs
+    - topObjectProperty
+    - bottomDataProperty
+    - topDataProperty
+    class_uri: owl:Thing
+  TransitiveProperty:
+    comments:
+    - The class of transitive properties.
+    is_a: ObjectProperty
+    class_uri: owl:TransitiveProperty
+  Resource:
+    slots:
+    - annotatedProperty
+    - annotatedSource
+    - annotatedTarget
+    - members
+  Datatype:
+    slots:
+    - datatypeComplementOf
+    - onDatatype
+    - withRestrictions
+

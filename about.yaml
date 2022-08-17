@@ -1,0 +1,3 @@
+name: owl-schema
+description: my awesome datamodel is for awesome things
+source_schema_path: src/linkml/owl_schema.yaml

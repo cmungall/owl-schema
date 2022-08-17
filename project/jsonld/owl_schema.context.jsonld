@@ -1,0 +1,169 @@
+{
+   "_comments": "Auto generated from owl_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-08-16T19:36:02\n    Schema: owl\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://www.w3.org/2002/07/owl\n    description: owl\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "linkml": "https://w3id.org/linkml/",
+      "owl": "https://w3id.org/None/",
+      "rdf": "http://example.org/UNKNOWN/rdf/",
+      "rdfs": "http://example.org/UNKNOWN/rdfs/",
+      "@vocab": "https://w3id.org/None/",
+      "allValuesFrom": {
+         "@type": "@id"
+      },
+      "annotatedProperty": {
+         "@type": "@id"
+      },
+      "annotatedSource": {
+         "@type": "@id"
+      },
+      "annotatedTarget": {
+         "@type": "@id"
+      },
+      "assertionProperty": {
+         "@type": "@id"
+      },
+      "backwardCompatibleWith": {
+         "@type": "@id"
+      },
+      "bottomObjectProperty": {
+         "@type": "@id"
+      },
+      "complementOf": {
+         "@type": "@id"
+      },
+      "datatypeComplementOf": {
+         "@type": "@id"
+      },
+      "deprecated": {
+         "@type": "@id"
+      },
+      "differentFrom": {
+         "@type": "@id"
+      },
+      "disjointUnionOf": {
+         "@type": "@id"
+      },
+      "disjointWith": {
+         "@type": "@id"
+      },
+      "distinctMembers": {
+         "@type": "@id"
+      },
+      "domain": {
+         "@id": "rdfs:domain"
+      },
+      "equivalentClass": {
+         "@type": "@id"
+      },
+      "equivalentProperty": {
+         "@type": "@id"
+      },
+      "hasKey": {
+         "@type": "@id"
+      },
+      "hasSelf": {
+         "@type": "@id"
+      },
+      "hasValue": {
+         "@type": "@id"
+      },
+      "imports": {
+         "@type": "@id"
+      },
+      "incompatibleWith": {
+         "@type": "@id"
+      },
+      "intersectionOf": {
+         "@type": "@id"
+      },
+      "inverseOf": {
+         "@type": "@id"
+      },
+      "member": {
+         "@id": "rdfs:member"
+      },
+      "members": {
+         "@type": "@id"
+      },
+      "namespaceTransformation": {
+         "@id": "http://www.w3.org/2003/g/data-view#namespaceTransformation"
+      },
+      "onClass": {
+         "@type": "@id"
+      },
+      "onDataRange": {
+         "@type": "@id"
+      },
+      "onDatatype": {
+         "@type": "@id"
+      },
+      "oneOf": {
+         "@type": "@id"
+      },
+      "onProperties": {
+         "@type": "@id"
+      },
+      "onProperty": {
+         "@type": "@id"
+      },
+      "priorVersion": {
+         "@type": "@id"
+      },
+      "propertyChainAxiom": {
+         "@type": "@id"
+      },
+      "propertyDisjointWith": {
+         "@type": "@id"
+      },
+      "range": {
+         "@id": "rdfs:range"
+      },
+      "sameAs": {
+         "@type": "@id"
+      },
+      "someValuesFrom": {
+         "@type": "@id"
+      },
+      "sourceIndividual": {
+         "@type": "@id"
+      },
+      "subClassOf": {
+         "@id": "rdfs:subClassOf"
+      },
+      "subPropertyOf": {
+         "@id": "rdfs:subPropertyOf"
+      },
+      "targetIndividual": {
+         "@type": "@id"
+      },
+      "targetValue": {
+         "@type": "@id"
+      },
+      "title": {
+         "@id": "http://purl.org/dc/elements/1.1/title"
+      },
+      "topObjectProperty": {
+         "@type": "@id"
+      },
+      "unionOf": {
+         "@type": "@id"
+      },
+      "versionInfo": {
+         "@type": "@id"
+      },
+      "versionIRI": {
+         "@type": "@id"
+      },
+      "withRestrictions": {
+         "@type": "@id"
+      },
+      "List": {
+         "@id": "rdf:List"
+      },
+      "Literal": {
+         "@id": "rdf:Literal"
+      },
+      "Property": {
+         "@id": "rdf:Property"
+      }
+   }
+}

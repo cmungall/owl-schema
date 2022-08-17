@@ -1,0 +1,775 @@
+@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl1: <https://w3id.org/None/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.w3.org/2002/07/owl> a owl:Ontology ;
+    rdfs:label "owl" ;
+    IAO:0000700 owl1:Class,
+        owl1:Datatype,
+        owl1:List,
+        owl1:Literal,
+        owl1:Property,
+        owl1:Resource,
+        owl1:Thing ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    linkml:generation_date "2022-08-16T19:36:04" ;
+    linkml:metamodel_version "1.7.0" ;
+    linkml:source_file "owl_schema.yaml" ;
+    linkml:source_file_date "2022-08-16T19:35:23" ;
+    linkml:source_file_size 15715 .
+
+linkml:SubsetDefinition a owl:Class ;
+    rdfs:label "subset_definition" .
+
+linkml:TypeDefinition a owl:Class ;
+    rdfs:label "type_definition" .
+
+linkml:topValue a owl:DatatypeProperty ;
+    rdfs:label "value" .
+
+<http://example.org/UNKNOWN/rdfs/domain> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "domain" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://example.org/UNKNOWN/rdfs/domain> .
+
+<http://example.org/UNKNOWN/rdfs/member> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "member" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://example.org/UNKNOWN/rdfs/member> .
+
+<http://example.org/UNKNOWN/rdfs/range> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "range" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://example.org/UNKNOWN/rdfs/range> .
+
+<http://example.org/UNKNOWN/rdfs/subClassOf> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "subClassOf" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://example.org/UNKNOWN/rdfs/subClassOf> .
+
+<http://example.org/UNKNOWN/rdfs/subPropertyOf> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "subPropertyOf" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://example.org/UNKNOWN/rdfs/subPropertyOf> .
+
+<http://purl.org/dc/elements/1.1/title> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "title" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://purl.org/dc/elements/1.1/title> .
+
+<http://www.w3.org/2003/g/data-view#namespaceTransformation> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "namespaceTransformation" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://www.w3.org/2003/g/data-view#namespaceTransformation> .
+
+owl1:AllDifferent a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "AllDifferent" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:distinctMembers ],
+        owl1:Resource ;
+    skos:exactMatch owl1:AllDifferent ;
+    skos:note "The class of collections of pairwise different individuals." .
+
+owl1:AllDisjointClasses a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "AllDisjointClasses" ;
+    rdfs:subClassOf owl1:Resource ;
+    skos:exactMatch owl1:AllDisjointClasses ;
+    skos:note "The class of collections of pairwise disjoint classes." .
+
+owl1:AllDisjointProperties a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "AllDisjointProperties" ;
+    rdfs:subClassOf owl1:Resource ;
+    skos:exactMatch owl1:AllDisjointProperties ;
+    skos:note "The class of collections of pairwise disjoint properties." .
+
+owl1:Annotation a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Annotation" ;
+    rdfs:subClassOf owl1:Resource ;
+    skos:exactMatch owl1:Annotation ;
+    skos:note "The class of annotated annotations for which the RDF serialization consists of an annotated subject, predicate and object." .
+
+owl1:AnnotationProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "AnnotationProperty" ;
+    rdfs:subClassOf owl1:Property ;
+    skos:exactMatch owl1:AnnotationProperty ;
+    skos:note "The class of annotation properties." .
+
+owl1:AsymmetricProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "AsymmetricProperty" ;
+    rdfs:subClassOf owl1:ObjectProperty ;
+    skos:exactMatch owl1:AsymmetricProperty ;
+    skos:note "The class of asymmetric properties." .
+
+owl1:Axiom a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Axiom" ;
+    rdfs:subClassOf owl1:Resource ;
+    skos:exactMatch owl1:Axiom ;
+    skos:note "The class of annotated axioms for which the RDF serialization consists of an annotated subject, predicate and object." .
+
+owl1:DataRange a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "DataRange" ;
+    rdfs:subClassOf owl1:Datatype ;
+    skos:exactMatch owl1:DataRange ;
+    skos:note "The class of OWL data ranges, which are special kinds of datatypes. Note: The use of the IRI owl:DataRange has been deprecated as of OWL 2. The IRI rdfs:Datatype SHOULD be used instead." .
+
+owl1:DatatypeProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "DatatypeProperty" ;
+    rdfs:subClassOf owl1:Property ;
+    skos:exactMatch owl1:DatatypeProperty ;
+    skos:note "The class of data properties." .
+
+owl1:DeprecatedClass a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "DeprecatedClass" ;
+    rdfs:subClassOf owl1:Class ;
+    skos:exactMatch owl1:DeprecatedClass ;
+    skos:note "The class of deprecated classes." .
+
+owl1:DeprecatedProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "DeprecatedProperty" ;
+    rdfs:subClassOf owl1:Property ;
+    skos:exactMatch owl1:DeprecatedProperty ;
+    skos:note "The class of deprecated properties." .
+
+owl1:FunctionalProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "FunctionalProperty" ;
+    rdfs:subClassOf owl1:Property ;
+    skos:exactMatch owl1:FunctionalProperty ;
+    skos:note "The class of functional properties." .
+
+owl1:InverseFunctionalProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "InverseFunctionalProperty" ;
+    rdfs:subClassOf owl1:ObjectProperty ;
+    skos:exactMatch owl1:InverseFunctionalProperty ;
+    skos:note "The class of inverse-functional properties." .
+
+owl1:IrreflexiveProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "IrreflexiveProperty" ;
+    rdfs:subClassOf owl1:ObjectProperty ;
+    skos:exactMatch owl1:IrreflexiveProperty ;
+    skos:note "The class of irreflexive properties." .
+
+owl1:NamedIndividual a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "NamedIndividual" ;
+    rdfs:subClassOf owl1:Thing ;
+    skos:exactMatch owl1:NamedIndividual ;
+    skos:note "The class of named individuals." .
+
+owl1:NegativePropertyAssertion a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "NegativePropertyAssertion" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Property ;
+            owl:onProperty owl1:assertionProperty ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Thing ;
+            owl:onProperty owl1:targetIndividual ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Thing ;
+            owl:onProperty owl1:sourceIndividual ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Literal ;
+            owl:onProperty owl1:targetValue ],
+        owl1:Resource ;
+    skos:exactMatch owl1:NegativePropertyAssertion ;
+    skos:note "The class of negative property assertions." .
+
+owl1:Nothing a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Nothing" ;
+    rdfs:subClassOf owl1:Thing ;
+    skos:exactMatch owl1:Nothing ;
+    skos:note "This is the empty class." .
+
+owl1:OntologyProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "OntologyProperty" ;
+    rdfs:subClassOf owl1:Property ;
+    skos:exactMatch owl1:OntologyProperty ;
+    skos:note "The class of ontology properties." .
+
+owl1:ReflexiveProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "ReflexiveProperty" ;
+    rdfs:subClassOf owl1:ObjectProperty ;
+    skos:exactMatch owl1:ReflexiveProperty ;
+    skos:note "The class of reflexive properties." .
+
+owl1:Restriction a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Restriction" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:cardinality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:maxQualifiedCardinality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Class ;
+            owl:onProperty owl1:onClass ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:onProperties ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Class ;
+            owl:onProperty owl1:allValuesFrom ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Datatype ;
+            owl:onProperty owl1:onDataRange ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:maxCardinality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Resource ;
+            owl:onProperty owl1:hasValue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:qualifiedCardinality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Property ;
+            owl:onProperty owl1:onProperty ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:minCardinality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Class ;
+            owl:onProperty owl1:someValuesFrom ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Resource ;
+            owl:onProperty owl1:hasSelf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:minQualifiedCardinality ],
+        owl1:Class ;
+    skos:exactMatch owl1:Restriction ;
+    skos:note "The class of property restrictions." .
+
+owl1:SymmetricProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "SymmetricProperty" ;
+    rdfs:subClassOf owl1:ObjectProperty ;
+    skos:exactMatch owl1:SymmetricProperty ;
+    skos:note "The class of symmetric properties." .
+
+owl1:TransitiveProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "TransitiveProperty" ;
+    rdfs:subClassOf owl1:ObjectProperty ;
+    skos:exactMatch owl1:TransitiveProperty ;
+    skos:note "The class of transitive properties." .
+
+owl1:backwardCompatibleWith a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "backwardCompatibleWith" ;
+    rdfs:range owl1:Ontology ;
+    skos:exactMatch owl1:backwardCompatibleWith ;
+    skos:note "The annotation property that indicates that a given ontology is backward compatible with another ontology." .
+
+owl1:deprecated a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "deprecated" ;
+    rdfs:range owl1:Resource ;
+    skos:exactMatch owl1:deprecated ;
+    skos:note "The annotation property that indicates that a given entity has been deprecated." .
+
+owl1:imports a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "imports" ;
+    rdfs:range owl1:Ontology ;
+    skos:exactMatch owl1:imports ;
+    skos:note "The property that is used for importing other ontologies into a given ontology." .
+
+owl1:incompatibleWith a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "incompatibleWith" ;
+    rdfs:range owl1:Ontology ;
+    skos:exactMatch owl1:incompatibleWith ;
+    skos:note "The annotation property that indicates that a given ontology is incompatible with another ontology." .
+
+owl1:priorVersion a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "priorVersion" ;
+    rdfs:range owl1:Ontology ;
+    skos:exactMatch owl1:priorVersion ;
+    skos:note "The annotation property that indicates the predecessor ontology of a given ontology." .
+
+owl1:versionIRI a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "versionIRI" ;
+    rdfs:range owl1:Ontology ;
+    skos:exactMatch owl1:versionIRI ;
+    skos:note "The property that identifies the version IRI of an ontology." .
+
+owl1:versionInfo a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "versionInfo" ;
+    rdfs:range owl1:Resource ;
+    skos:exactMatch owl1:versionInfo ;
+    skos:note "The annotation property that provides version information for an ontology or another OWL construct." .
+
+owl1:allValuesFrom a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "allValuesFrom" ;
+    rdfs:range owl1:Class ;
+    skos:exactMatch owl1:allValuesFrom ;
+    skos:note "The property that determines the class that a universal property restriction refers to." .
+
+owl1:annotatedProperty a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "annotatedProperty" ;
+    rdfs:range owl1:Resource ;
+    skos:exactMatch owl1:annotatedProperty ;
+    skos:note "The property that determines the predicate of an annotated axiom or annotated annotation." .
+
+owl1:annotatedSource a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "annotatedSource" ;
+    rdfs:range owl1:Resource ;
+    skos:exactMatch owl1:annotatedSource ;
+    skos:note "The property that determines the subject of an annotated axiom or annotated annotation." .
+
+owl1:annotatedTarget a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "annotatedTarget" ;
+    rdfs:range owl1:Resource ;
+    skos:exactMatch owl1:annotatedTarget ;
+    skos:note "The property that determines the object of an annotated axiom or annotated annotation." .
+
+owl1:assertionProperty a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "assertionProperty" ;
+    rdfs:range owl1:Property ;
+    skos:exactMatch owl1:assertionProperty ;
+    skos:note "The property that determines the predicate of a negative property assertion." .
+
+owl1:bottomDataProperty a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "bottomDataProperty" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch owl1:bottomDataProperty ;
+    skos:note "The data property that does not relate any individual to any data value." .
+
+owl1:bottomObjectProperty a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "bottomObjectProperty" ;
+    rdfs:range owl1:Thing ;
+    skos:exactMatch owl1:bottomObjectProperty ;
+    skos:note "The object property that does not relate any two individuals." .
+
+owl1:cardinality a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cardinality" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch owl1:cardinality ;
+    skos:note "The property that determines the cardinality of an exact cardinality restriction." .
+
+owl1:complementOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "complementOf" ;
+    rdfs:range owl1:Class ;
+    skos:exactMatch owl1:complementOf ;
+    skos:note "The property that determines that a given class is the complement of another class." .
+
+owl1:datatypeComplementOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "datatypeComplementOf" ;
+    rdfs:range owl1:Datatype ;
+    skos:exactMatch owl1:datatypeComplementOf ;
+    skos:note "The property that determines that a given data range is the complement of another data range with respect to the data domain." .
+
+owl1:differentFrom a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "differentFrom" ;
+    rdfs:range owl1:Thing ;
+    skos:exactMatch owl1:differentFrom ;
+    skos:note "The property that determines that two given individuals are different." .
+
+owl1:disjointUnionOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "disjointUnionOf" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:disjointUnionOf ;
+    skos:note "The property that determines that a given class is equivalent to the disjoint union of a collection of other classes." .
+
+owl1:disjointWith a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "disjointWith" ;
+    rdfs:range owl1:Class ;
+    skos:exactMatch owl1:disjointWith ;
+    skos:note "The property that determines that two given classes are disjoint." .
+
+owl1:distinctMembers a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "distinctMembers" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:distinctMembers ;
+    skos:note "The property that determines the collection of pairwise different individuals in a owl:AllDifferent axiom." .
+
+owl1:equivalentClass a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "equivalentClass" ;
+    rdfs:range owl1:Class ;
+    skos:exactMatch owl1:equivalentClass ;
+    skos:note "The property that determines that two given classes are equivalent, and that is used to specify datatype definitions." .
+
+owl1:equivalentProperty a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "equivalentProperty" ;
+    rdfs:range owl1:Property ;
+    skos:exactMatch owl1:equivalentProperty ;
+    skos:note "The property that determines that two given properties are equivalent." .
+
+owl1:hasKey a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasKey" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:hasKey ;
+    skos:note "The property that determines the collection of properties that jointly build a key." .
+
+owl1:hasSelf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSelf" ;
+    rdfs:range owl1:Resource ;
+    skos:exactMatch owl1:hasSelf ;
+    skos:note "The property that determines the property that a self restriction refers to." .
+
+owl1:hasValue a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasValue" ;
+    rdfs:range owl1:Resource ;
+    skos:exactMatch owl1:hasValue ;
+    skos:note "The property that determines the individual that a has-value restriction refers to." .
+
+owl1:intersectionOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "intersectionOf" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:intersectionOf ;
+    skos:note "The property that determines the collection of classes or data ranges that build an intersection." .
+
+owl1:inverseOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "inverseOf" ;
+    rdfs:range owl1:ObjectProperty ;
+    skos:exactMatch owl1:inverseOf ;
+    skos:note "The property that determines that two given properties are inverse." .
+
+owl1:maxCardinality a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "maxCardinality" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch owl1:maxCardinality ;
+    skos:note "The property that determines the cardinality of a maximum cardinality restriction." .
+
+owl1:maxQualifiedCardinality a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "maxQualifiedCardinality" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch owl1:maxQualifiedCardinality ;
+    skos:note "The property that determines the cardinality of a maximum qualified cardinality restriction." .
+
+owl1:members a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "members" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:members ;
+    skos:note "The property that determines the collection of members in either a owl:AllDifferent, owl:AllDisjointClasses or owl:AllDisjointProperties axiom." .
+
+owl1:minCardinality a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "minCardinality" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch owl1:minCardinality ;
+    skos:note "The property that determines the cardinality of a minimum cardinality restriction." .
+
+owl1:minQualifiedCardinality a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "minQualifiedCardinality" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch owl1:minQualifiedCardinality ;
+    skos:note "The property that determines the cardinality of a minimum qualified cardinality restriction." .
+
+owl1:onClass a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "onClass" ;
+    rdfs:range owl1:Class ;
+    skos:exactMatch owl1:onClass ;
+    skos:note "The property that determines the class that a qualified object cardinality restriction refers to." .
+
+owl1:onDataRange a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "onDataRange" ;
+    rdfs:range owl1:Datatype ;
+    skos:exactMatch owl1:onDataRange ;
+    skos:note "The property that determines the data range that a qualified data cardinality restriction refers to." .
+
+owl1:onDatatype a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "onDatatype" ;
+    rdfs:range owl1:Datatype ;
+    skos:exactMatch owl1:onDatatype ;
+    skos:note "The property that determines the datatype that a datatype restriction refers to." .
+
+owl1:onProperties a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "onProperties" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:onProperties ;
+    skos:note "The property that determines the n-tuple of properties that a property restriction on an n-ary data range refers to." .
+
+owl1:onProperty a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "onProperty" ;
+    rdfs:range owl1:Property ;
+    skos:exactMatch owl1:onProperty ;
+    skos:note "The property that determines the property that a property restriction refers to." .
+
+owl1:oneOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "oneOf" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:oneOf ;
+    skos:note "The property that determines the collection of individuals or data values that build an enumeration." .
+
+owl1:propertyChainAxiom a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "propertyChainAxiom" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:propertyChainAxiom ;
+    skos:note "The property that determines the n-tuple of properties that build a sub property chain of a given property." .
+
+owl1:propertyDisjointWith a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "propertyDisjointWith" ;
+    rdfs:range owl1:Property ;
+    skos:exactMatch owl1:propertyDisjointWith ;
+    skos:note "The property that determines that two given properties are disjoint." .
+
+owl1:qualifiedCardinality a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "qualifiedCardinality" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch owl1:qualifiedCardinality ;
+    skos:note "The property that determines the cardinality of an exact qualified cardinality restriction." .
+
+owl1:sameAs a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "sameAs" ;
+    rdfs:range owl1:Thing ;
+    skos:exactMatch owl1:sameAs ;
+    skos:note "The property that determines that two given individuals are equal." .
+
+owl1:someValuesFrom a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "someValuesFrom" ;
+    rdfs:range owl1:Class ;
+    skos:exactMatch owl1:someValuesFrom ;
+    skos:note "The property that determines the class that an existential property restriction refers to." .
+
+owl1:sourceIndividual a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "sourceIndividual" ;
+    rdfs:range owl1:Thing ;
+    skos:exactMatch owl1:sourceIndividual ;
+    skos:note "The property that determines the subject of a negative property assertion." .
+
+owl1:targetIndividual a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "targetIndividual" ;
+    rdfs:range owl1:Thing ;
+    skos:exactMatch owl1:targetIndividual ;
+    skos:note "The property that determines the object of a negative object property assertion." .
+
+owl1:targetValue a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "targetValue" ;
+    rdfs:range owl1:Literal ;
+    skos:exactMatch owl1:targetValue ;
+    skos:note "The property that determines the value of a negative data property assertion." .
+
+owl1:topDataProperty a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "topDataProperty" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch owl1:topDataProperty ;
+    skos:note "The data property that relates every individual to every data value." .
+
+owl1:topObjectProperty a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "topObjectProperty" ;
+    rdfs:range owl1:Thing ;
+    skos:exactMatch owl1:topObjectProperty ;
+    skos:note "The object property that relates every two individuals." .
+
+owl1:unionOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "unionOf" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:unionOf ;
+    skos:note "The property that determines the collection of classes or data ranges that build a union." .
+
+owl1:withRestrictions a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "withRestrictions" ;
+    rdfs:range owl1:List ;
+    skos:exactMatch owl1:withRestrictions ;
+    skos:note "The property that determines the collection of facet-value pairs that define a datatype restriction." .
+
+owl1:Literal a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Literal" ;
+    skos:exactMatch <http://example.org/UNKNOWN/rdf/Literal> .
+
+owl1:Ontology a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Ontology" ;
+    rdfs:subClassOf owl1:Resource ;
+    skos:exactMatch owl1:Ontology ;
+    skos:note "The class of ontologies." .
+
+owl1:Datatype a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Datatype" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Datatype ;
+            owl:onProperty owl1:datatypeComplementOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Datatype ;
+            owl:onProperty owl1:onDatatype ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:withRestrictions ] .
+
+owl1:ObjectProperty a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "ObjectProperty" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:propertyChainAxiom ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:ObjectProperty ;
+            owl:onProperty owl1:inverseOf ],
+        owl1:Property ;
+    skos:exactMatch owl1:ObjectProperty ;
+    skos:note "The class of object properties." .
+
+owl1:Property a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Property" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Property ;
+            owl:onProperty owl1:propertyDisjointWith ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Property ;
+            owl:onProperty owl1:equivalentProperty ] ;
+    skos:exactMatch <http://example.org/UNKNOWN/rdf/Property> .
+
+owl1:Class a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Class" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:oneOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:intersectionOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:hasKey ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:disjointUnionOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:unionOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Class ;
+            owl:onProperty owl1:disjointWith ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Class ;
+            owl:onProperty owl1:complementOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Class ;
+            owl:onProperty owl1:equivalentClass ] ;
+    skos:exactMatch owl1:Class ;
+    skos:note "The class of OWL classes." .
+
+owl1:Thing a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Thing" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:bottomDataProperty ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Thing ;
+            owl:onProperty owl1:bottomObjectProperty ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Thing ;
+            owl:onProperty owl1:sameAs ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty owl1:topDataProperty ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Thing ;
+            owl:onProperty owl1:differentFrom ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Thing ;
+            owl:onProperty owl1:topObjectProperty ] ;
+    skos:exactMatch owl1:Thing ;
+    skos:note "The class of OWL individuals." .
+
+owl1:Resource a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Resource" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Resource ;
+            owl:onProperty owl1:annotatedSource ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:List ;
+            owl:onProperty owl1:members ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Resource ;
+            owl:onProperty owl1:annotatedProperty ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom owl1:Resource ;
+            owl:onProperty owl1:annotatedTarget ] .
+
+owl1:List a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "List" ;
+    skos:exactMatch <http://example.org/UNKNOWN/rdf/List> .
+
+linkml:ClassDefinition a owl:Class ;
+    rdfs:label "class_definition" .
+
+linkml:SlotDefinition a owl:Class ;
+    rdfs:label "slot_definition" .
+
+

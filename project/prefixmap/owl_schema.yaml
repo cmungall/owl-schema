@@ -1,0 +1,15 @@
+{
+   "linkml": "https://w3id.org/linkml/",
+   "owl": "https://w3id.org/None/",
+   "rdf": "http://example.org/UNKNOWN/rdf/",
+   "rdfs": "http://example.org/UNKNOWN/rdfs/",
+   "List": {
+      "@id": "rdf:List"
+   },
+   "Literal": {
+      "@id": "rdf:Literal"
+   },
+   "Property": {
+      "@id": "rdf:Property"
+   }
+}

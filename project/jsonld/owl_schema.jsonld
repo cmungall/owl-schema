@@ -1,0 +1,1912 @@
+{
+  "name": "owl",
+  "description": "owl",
+  "id": "http://www.w3.org/2002/07/owl",
+  "imports": [
+    "linkml:types"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "prefixes": [
+    {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "owl",
+      "prefix_reference": "https://w3id.org/None/"
+    }
+  ],
+  "default_prefix": "owl",
+  "default_range": "string",
+  "types": [
+    {
+      "name": "string",
+      "definition_uri": "https://w3id.org/linkml/String",
+      "description": "A character string",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "integer",
+      "definition_uri": "https://w3id.org/linkml/Integer",
+      "description": "An integer",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "int",
+      "uri": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "boolean",
+      "definition_uri": "https://w3id.org/linkml/Boolean",
+      "description": "A binary (true or false) value",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Bool",
+      "uri": "http://www.w3.org/2001/XMLSchema#boolean",
+      "repr": "bool",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "float",
+      "definition_uri": "https://w3id.org/linkml/Float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "double",
+      "definition_uri": "https://w3id.org/linkml/Double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "decimal",
+      "definition_uri": "https://w3id.org/linkml/Decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Decimal",
+      "uri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "time",
+      "definition_uri": "https://w3id.org/linkml/Time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners do not work with straight date or time"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "XSDTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date",
+      "definition_uri": "https://w3id.org/linkml/Date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "XSDDate",
+      "uri": "http://www.w3.org/2001/XMLSchema#date",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "datetime",
+      "definition_uri": "https://w3id.org/linkml/Datetime",
+      "description": "The combination of a date and time",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "XSDDateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date_or_datetime",
+      "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
+      "description": "Either a date or a datetime",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "https://w3id.org/linkml/DateOrDatetime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uriorcurie",
+      "definition_uri": "https://w3id.org/linkml/Uriorcurie",
+      "description": "a URI or a CURIE",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "description": "a complete URI",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URI",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "ncname",
+      "definition_uri": "https://w3id.org/linkml/Ncname",
+      "description": "Prefix part of CURIE",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NCName",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "objectidentifier",
+      "definition_uri": "https://w3id.org/linkml/Objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "comments": [
+        "Used for inheritence and type checking"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "ElementIdentifier",
+      "uri": "http://www.w3.org/ns/shex#iri",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "nodeidentifier",
+      "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NodeIdentifier",
+      "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    }
+  ],
+  "slots": [
+    {
+      "name": "domain",
+      "definition_uri": "https://w3id.org/None/domain",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "http://example.org/UNKNOWN/rdfs/domain"
+      ],
+      "slot_uri": "http://example.org/UNKNOWN/rdfs/domain",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "member",
+      "definition_uri": "https://w3id.org/None/member",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "http://example.org/UNKNOWN/rdfs/member"
+      ],
+      "slot_uri": "http://example.org/UNKNOWN/rdfs/member",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "range",
+      "definition_uri": "https://w3id.org/None/range",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "http://example.org/UNKNOWN/rdfs/range"
+      ],
+      "slot_uri": "http://example.org/UNKNOWN/rdfs/range",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "subClassOf",
+      "definition_uri": "https://w3id.org/None/subClassOf",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "http://example.org/UNKNOWN/rdfs/subClassOf"
+      ],
+      "slot_uri": "http://example.org/UNKNOWN/rdfs/subClassOf",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "subPropertyOf",
+      "definition_uri": "https://w3id.org/None/subPropertyOf",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "http://example.org/UNKNOWN/rdfs/subPropertyOf"
+      ],
+      "slot_uri": "http://example.org/UNKNOWN/rdfs/subPropertyOf",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "allValuesFrom",
+      "definition_uri": "https://w3id.org/None/allValuesFrom",
+      "comments": [
+        "The property that determines the class that a universal property restriction refers to."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/allValuesFrom"
+      ],
+      "slot_uri": "https://w3id.org/None/allValuesFrom",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "Class",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "annotatedProperty",
+      "definition_uri": "https://w3id.org/None/annotatedProperty",
+      "comments": [
+        "The property that determines the predicate of an annotated axiom or annotated annotation."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/annotatedProperty"
+      ],
+      "slot_uri": "https://w3id.org/None/annotatedProperty",
+      "multivalued": true,
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "Resource",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "annotatedSource",
+      "definition_uri": "https://w3id.org/None/annotatedSource",
+      "comments": [
+        "The property that determines the subject of an annotated axiom or annotated annotation."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/annotatedSource"
+      ],
+      "slot_uri": "https://w3id.org/None/annotatedSource",
+      "multivalued": true,
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "Resource",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "annotatedTarget",
+      "definition_uri": "https://w3id.org/None/annotatedTarget",
+      "comments": [
+        "The property that determines the object of an annotated axiom or annotated annotation."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/annotatedTarget"
+      ],
+      "slot_uri": "https://w3id.org/None/annotatedTarget",
+      "multivalued": true,
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "Resource",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "assertionProperty",
+      "definition_uri": "https://w3id.org/None/assertionProperty",
+      "comments": [
+        "The property that determines the predicate of a negative property assertion."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/assertionProperty"
+      ],
+      "slot_uri": "https://w3id.org/None/assertionProperty",
+      "multivalued": true,
+      "owner": "NegativePropertyAssertion",
+      "domain_of": [
+        "NegativePropertyAssertion"
+      ],
+      "range": "Property",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "bottomObjectProperty",
+      "definition_uri": "https://w3id.org/None/bottomObjectProperty",
+      "comments": [
+        "The object property that does not relate any two individuals."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/bottomObjectProperty"
+      ],
+      "slot_uri": "https://w3id.org/None/bottomObjectProperty",
+      "multivalued": true,
+      "owner": "Thing",
+      "domain_of": [
+        "Thing"
+      ],
+      "range": "Thing",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "complementOf",
+      "definition_uri": "https://w3id.org/None/complementOf",
+      "comments": [
+        "The property that determines that a given class is the complement of another class."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/complementOf"
+      ],
+      "slot_uri": "https://w3id.org/None/complementOf",
+      "multivalued": true,
+      "owner": "Class",
+      "domain_of": [
+        "Class"
+      ],
+      "range": "Class",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "datatypeComplementOf",
+      "definition_uri": "https://w3id.org/None/datatypeComplementOf",
+      "comments": [
+        "The property that determines that a given data range is the complement of another data range with respect to the data domain."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/datatypeComplementOf"
+      ],
+      "slot_uri": "https://w3id.org/None/datatypeComplementOf",
+      "multivalued": true,
+      "owner": "Datatype",
+      "domain_of": [
+        "Datatype"
+      ],
+      "range": "Datatype",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "differentFrom",
+      "definition_uri": "https://w3id.org/None/differentFrom",
+      "comments": [
+        "The property that determines that two given individuals are different."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/differentFrom"
+      ],
+      "slot_uri": "https://w3id.org/None/differentFrom",
+      "multivalued": true,
+      "owner": "Thing",
+      "domain_of": [
+        "Thing"
+      ],
+      "range": "Thing",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "disjointUnionOf",
+      "definition_uri": "https://w3id.org/None/disjointUnionOf",
+      "comments": [
+        "The property that determines that a given class is equivalent to the disjoint union of a collection of other classes."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/disjointUnionOf"
+      ],
+      "slot_uri": "https://w3id.org/None/disjointUnionOf",
+      "multivalued": true,
+      "owner": "Class",
+      "domain_of": [
+        "Class"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "disjointWith",
+      "definition_uri": "https://w3id.org/None/disjointWith",
+      "comments": [
+        "The property that determines that two given classes are disjoint."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/disjointWith"
+      ],
+      "slot_uri": "https://w3id.org/None/disjointWith",
+      "multivalued": true,
+      "owner": "Class",
+      "domain_of": [
+        "Class"
+      ],
+      "range": "Class",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "distinctMembers",
+      "definition_uri": "https://w3id.org/None/distinctMembers",
+      "comments": [
+        "The property that determines the collection of pairwise different individuals in a owl:AllDifferent axiom."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/distinctMembers"
+      ],
+      "slot_uri": "https://w3id.org/None/distinctMembers",
+      "multivalued": true,
+      "owner": "AllDifferent",
+      "domain_of": [
+        "AllDifferent"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "equivalentClass",
+      "definition_uri": "https://w3id.org/None/equivalentClass",
+      "comments": [
+        "The property that determines that two given classes are equivalent, and that is used to specify datatype definitions."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/equivalentClass"
+      ],
+      "slot_uri": "https://w3id.org/None/equivalentClass",
+      "multivalued": true,
+      "owner": "Class",
+      "domain_of": [
+        "Class"
+      ],
+      "range": "Class",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "equivalentProperty",
+      "definition_uri": "https://w3id.org/None/equivalentProperty",
+      "comments": [
+        "The property that determines that two given properties are equivalent."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/equivalentProperty"
+      ],
+      "slot_uri": "https://w3id.org/None/equivalentProperty",
+      "multivalued": true,
+      "owner": "Property",
+      "domain_of": [
+        "Property"
+      ],
+      "range": "Property",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasKey",
+      "definition_uri": "https://w3id.org/None/hasKey",
+      "comments": [
+        "The property that determines the collection of properties that jointly build a key."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/hasKey"
+      ],
+      "slot_uri": "https://w3id.org/None/hasKey",
+      "multivalued": true,
+      "owner": "Class",
+      "domain_of": [
+        "Class"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSelf",
+      "definition_uri": "https://w3id.org/None/hasSelf",
+      "comments": [
+        "The property that determines the property that a self restriction refers to."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/hasSelf"
+      ],
+      "slot_uri": "https://w3id.org/None/hasSelf",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "Resource",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasValue",
+      "definition_uri": "https://w3id.org/None/hasValue",
+      "comments": [
+        "The property that determines the individual that a has-value restriction refers to."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/hasValue"
+      ],
+      "slot_uri": "https://w3id.org/None/hasValue",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "Resource",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "intersectionOf",
+      "definition_uri": "https://w3id.org/None/intersectionOf",
+      "comments": [
+        "The property that determines the collection of classes or data ranges that build an intersection."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/intersectionOf"
+      ],
+      "slot_uri": "https://w3id.org/None/intersectionOf",
+      "multivalued": true,
+      "owner": "Class",
+      "domain_of": [
+        "Class"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "inverseOf",
+      "definition_uri": "https://w3id.org/None/inverseOf",
+      "comments": [
+        "The property that determines that two given properties are inverse."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/inverseOf"
+      ],
+      "slot_uri": "https://w3id.org/None/inverseOf",
+      "multivalued": true,
+      "owner": "ObjectProperty",
+      "domain_of": [
+        "ObjectProperty"
+      ],
+      "range": "ObjectProperty",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "members",
+      "definition_uri": "https://w3id.org/None/members",
+      "comments": [
+        "The property that determines the collection of members in either a owl:AllDifferent, owl:AllDisjointClasses or owl:AllDisjointProperties axiom."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/members"
+      ],
+      "slot_uri": "https://w3id.org/None/members",
+      "multivalued": true,
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "onClass",
+      "definition_uri": "https://w3id.org/None/onClass",
+      "comments": [
+        "The property that determines the class that a qualified object cardinality restriction refers to."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/onClass"
+      ],
+      "slot_uri": "https://w3id.org/None/onClass",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "Class",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "onDataRange",
+      "definition_uri": "https://w3id.org/None/onDataRange",
+      "comments": [
+        "The property that determines the data range that a qualified data cardinality restriction refers to."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/onDataRange"
+      ],
+      "slot_uri": "https://w3id.org/None/onDataRange",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "Datatype",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "onDatatype",
+      "definition_uri": "https://w3id.org/None/onDatatype",
+      "comments": [
+        "The property that determines the datatype that a datatype restriction refers to."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/onDatatype"
+      ],
+      "slot_uri": "https://w3id.org/None/onDatatype",
+      "multivalued": true,
+      "owner": "Datatype",
+      "domain_of": [
+        "Datatype"
+      ],
+      "range": "Datatype",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "onProperties",
+      "definition_uri": "https://w3id.org/None/onProperties",
+      "comments": [
+        "The property that determines the n-tuple of properties that a property restriction on an n-ary data range refers to."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/onProperties"
+      ],
+      "slot_uri": "https://w3id.org/None/onProperties",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "onProperty",
+      "definition_uri": "https://w3id.org/None/onProperty",
+      "comments": [
+        "The property that determines the property that a property restriction refers to."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/onProperty"
+      ],
+      "slot_uri": "https://w3id.org/None/onProperty",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "Property",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "oneOf",
+      "definition_uri": "https://w3id.org/None/oneOf",
+      "comments": [
+        "The property that determines the collection of individuals or data values that build an enumeration."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/oneOf"
+      ],
+      "slot_uri": "https://w3id.org/None/oneOf",
+      "multivalued": true,
+      "owner": "Class",
+      "domain_of": [
+        "Class"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "propertyChainAxiom",
+      "definition_uri": "https://w3id.org/None/propertyChainAxiom",
+      "comments": [
+        "The property that determines the n-tuple of properties that build a sub property chain of a given property."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/propertyChainAxiom"
+      ],
+      "slot_uri": "https://w3id.org/None/propertyChainAxiom",
+      "multivalued": true,
+      "owner": "ObjectProperty",
+      "domain_of": [
+        "ObjectProperty"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "propertyDisjointWith",
+      "definition_uri": "https://w3id.org/None/propertyDisjointWith",
+      "comments": [
+        "The property that determines that two given properties are disjoint."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/propertyDisjointWith"
+      ],
+      "slot_uri": "https://w3id.org/None/propertyDisjointWith",
+      "multivalued": true,
+      "owner": "Property",
+      "domain_of": [
+        "Property"
+      ],
+      "range": "Property",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sameAs",
+      "definition_uri": "https://w3id.org/None/sameAs",
+      "comments": [
+        "The property that determines that two given individuals are equal."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/sameAs"
+      ],
+      "slot_uri": "https://w3id.org/None/sameAs",
+      "multivalued": true,
+      "owner": "Thing",
+      "domain_of": [
+        "Thing"
+      ],
+      "range": "Thing",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "someValuesFrom",
+      "definition_uri": "https://w3id.org/None/someValuesFrom",
+      "comments": [
+        "The property that determines the class that an existential property restriction refers to."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/someValuesFrom"
+      ],
+      "slot_uri": "https://w3id.org/None/someValuesFrom",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "Class",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sourceIndividual",
+      "definition_uri": "https://w3id.org/None/sourceIndividual",
+      "comments": [
+        "The property that determines the subject of a negative property assertion."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/sourceIndividual"
+      ],
+      "slot_uri": "https://w3id.org/None/sourceIndividual",
+      "multivalued": true,
+      "owner": "NegativePropertyAssertion",
+      "domain_of": [
+        "NegativePropertyAssertion"
+      ],
+      "range": "Thing",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "targetIndividual",
+      "definition_uri": "https://w3id.org/None/targetIndividual",
+      "comments": [
+        "The property that determines the object of a negative object property assertion."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/targetIndividual"
+      ],
+      "slot_uri": "https://w3id.org/None/targetIndividual",
+      "multivalued": true,
+      "owner": "NegativePropertyAssertion",
+      "domain_of": [
+        "NegativePropertyAssertion"
+      ],
+      "range": "Thing",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "targetValue",
+      "definition_uri": "https://w3id.org/None/targetValue",
+      "comments": [
+        "The property that determines the value of a negative data property assertion."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/targetValue"
+      ],
+      "slot_uri": "https://w3id.org/None/targetValue",
+      "multivalued": true,
+      "owner": "NegativePropertyAssertion",
+      "domain_of": [
+        "NegativePropertyAssertion"
+      ],
+      "range": "Literal",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "topObjectProperty",
+      "definition_uri": "https://w3id.org/None/topObjectProperty",
+      "comments": [
+        "The object property that relates every two individuals."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/topObjectProperty"
+      ],
+      "slot_uri": "https://w3id.org/None/topObjectProperty",
+      "multivalued": true,
+      "owner": "Thing",
+      "domain_of": [
+        "Thing"
+      ],
+      "range": "Thing",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "unionOf",
+      "definition_uri": "https://w3id.org/None/unionOf",
+      "comments": [
+        "The property that determines the collection of classes or data ranges that build a union."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/unionOf"
+      ],
+      "slot_uri": "https://w3id.org/None/unionOf",
+      "multivalued": true,
+      "owner": "Class",
+      "domain_of": [
+        "Class"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "withRestrictions",
+      "definition_uri": "https://w3id.org/None/withRestrictions",
+      "comments": [
+        "The property that determines the collection of facet-value pairs that define a datatype restriction."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/withRestrictions"
+      ],
+      "slot_uri": "https://w3id.org/None/withRestrictions",
+      "multivalued": true,
+      "owner": "Datatype",
+      "domain_of": [
+        "Datatype"
+      ],
+      "range": "List",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "bottomDataProperty",
+      "definition_uri": "https://w3id.org/None/bottomDataProperty",
+      "comments": [
+        "The data property that does not relate any individual to any data value."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/bottomDataProperty"
+      ],
+      "slot_uri": "https://w3id.org/None/bottomDataProperty",
+      "multivalued": true,
+      "owner": "Thing",
+      "domain_of": [
+        "Thing"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cardinality",
+      "definition_uri": "https://w3id.org/None/cardinality",
+      "comments": [
+        "The property that determines the cardinality of an exact cardinality restriction."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/cardinality"
+      ],
+      "slot_uri": "https://w3id.org/None/cardinality",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "maxCardinality",
+      "definition_uri": "https://w3id.org/None/maxCardinality",
+      "comments": [
+        "The property that determines the cardinality of a maximum cardinality restriction."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/maxCardinality"
+      ],
+      "slot_uri": "https://w3id.org/None/maxCardinality",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "maxQualifiedCardinality",
+      "definition_uri": "https://w3id.org/None/maxQualifiedCardinality",
+      "comments": [
+        "The property that determines the cardinality of a maximum qualified cardinality restriction."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/maxQualifiedCardinality"
+      ],
+      "slot_uri": "https://w3id.org/None/maxQualifiedCardinality",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "minCardinality",
+      "definition_uri": "https://w3id.org/None/minCardinality",
+      "comments": [
+        "The property that determines the cardinality of a minimum cardinality restriction."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/minCardinality"
+      ],
+      "slot_uri": "https://w3id.org/None/minCardinality",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "minQualifiedCardinality",
+      "definition_uri": "https://w3id.org/None/minQualifiedCardinality",
+      "comments": [
+        "The property that determines the cardinality of a minimum qualified cardinality restriction."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/minQualifiedCardinality"
+      ],
+      "slot_uri": "https://w3id.org/None/minQualifiedCardinality",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "qualifiedCardinality",
+      "definition_uri": "https://w3id.org/None/qualifiedCardinality",
+      "comments": [
+        "The property that determines the cardinality of an exact qualified cardinality restriction."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/qualifiedCardinality"
+      ],
+      "slot_uri": "https://w3id.org/None/qualifiedCardinality",
+      "multivalued": true,
+      "owner": "Restriction",
+      "domain_of": [
+        "Restriction"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "topDataProperty",
+      "definition_uri": "https://w3id.org/None/topDataProperty",
+      "comments": [
+        "The data property that relates every individual to every data value."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/topDataProperty"
+      ],
+      "slot_uri": "https://w3id.org/None/topDataProperty",
+      "multivalued": true,
+      "owner": "Thing",
+      "domain_of": [
+        "Thing"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "title",
+      "definition_uri": "https://w3id.org/None/title",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "http://purl.org/dc/elements/1.1/title"
+      ],
+      "slot_uri": "http://purl.org/dc/elements/1.1/title",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "backwardCompatibleWith",
+      "definition_uri": "https://w3id.org/None/backwardCompatibleWith",
+      "comments": [
+        "The annotation property that indicates that a given ontology is backward compatible with another ontology."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/backwardCompatibleWith"
+      ],
+      "slot_uri": "https://w3id.org/None/backwardCompatibleWith",
+      "multivalued": true,
+      "range": "Ontology",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "deprecated",
+      "definition_uri": "https://w3id.org/None/deprecated",
+      "comments": [
+        "The annotation property that indicates that a given entity has been deprecated."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/deprecated"
+      ],
+      "slot_uri": "https://w3id.org/None/deprecated",
+      "multivalued": true,
+      "range": "Resource",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "imports",
+      "definition_uri": "https://w3id.org/None/imports",
+      "comments": [
+        "The property that is used for importing other ontologies into a given ontology."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/imports"
+      ],
+      "slot_uri": "https://w3id.org/None/imports",
+      "multivalued": true,
+      "range": "Ontology",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "incompatibleWith",
+      "definition_uri": "https://w3id.org/None/incompatibleWith",
+      "comments": [
+        "The annotation property that indicates that a given ontology is incompatible with another ontology."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/incompatibleWith"
+      ],
+      "slot_uri": "https://w3id.org/None/incompatibleWith",
+      "multivalued": true,
+      "range": "Ontology",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "priorVersion",
+      "definition_uri": "https://w3id.org/None/priorVersion",
+      "comments": [
+        "The annotation property that indicates the predecessor ontology of a given ontology."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/priorVersion"
+      ],
+      "slot_uri": "https://w3id.org/None/priorVersion",
+      "multivalued": true,
+      "range": "Ontology",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "versionIRI",
+      "definition_uri": "https://w3id.org/None/versionIRI",
+      "comments": [
+        "The property that identifies the version IRI of an ontology."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/versionIRI"
+      ],
+      "slot_uri": "https://w3id.org/None/versionIRI",
+      "multivalued": true,
+      "range": "Ontology",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "versionInfo",
+      "definition_uri": "https://w3id.org/None/versionInfo",
+      "comments": [
+        "The annotation property that provides version information for an ontology or another OWL construct."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "https://w3id.org/None/versionInfo"
+      ],
+      "slot_uri": "https://w3id.org/None/versionInfo",
+      "multivalued": true,
+      "range": "Resource",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "namespaceTransformation",
+      "definition_uri": "https://w3id.org/None/namespaceTransformation",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "http://www.w3.org/2003/g/data-view#namespaceTransformation"
+      ],
+      "slot_uri": "http://www.w3.org/2003/g/data-view#namespaceTransformation",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    }
+  ],
+  "classes": [
+    {
+      "name": "Literal",
+      "definition_uri": "https://w3id.org/None/Literal",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "rdf:Literal"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://example.org/UNKNOWN/rdf/Literal",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "List",
+      "definition_uri": "https://w3id.org/None/List",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "rdf:List"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://example.org/UNKNOWN/rdf/List",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Property",
+      "definition_uri": "https://w3id.org/None/Property",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "rdf:Property"
+      ],
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://example.org/UNKNOWN/rdf/Property",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AllDifferent",
+      "definition_uri": "https://w3id.org/None/AllDifferent",
+      "comments": [
+        "The class of collections of pairwise different individuals."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:AllDifferent"
+      ],
+      "is_a": "Resource",
+      "slots": [
+        "annotatedProperty",
+        "annotatedSource",
+        "annotatedTarget",
+        "members",
+        "distinctMembers"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/AllDifferent",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AllDisjointClasses",
+      "definition_uri": "https://w3id.org/None/AllDisjointClasses",
+      "comments": [
+        "The class of collections of pairwise disjoint classes."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:AllDisjointClasses"
+      ],
+      "is_a": "Resource",
+      "slots": [
+        "annotatedProperty",
+        "annotatedSource",
+        "annotatedTarget",
+        "members"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/AllDisjointClasses",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AllDisjointProperties",
+      "definition_uri": "https://w3id.org/None/AllDisjointProperties",
+      "comments": [
+        "The class of collections of pairwise disjoint properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:AllDisjointProperties"
+      ],
+      "is_a": "Resource",
+      "slots": [
+        "annotatedProperty",
+        "annotatedSource",
+        "annotatedTarget",
+        "members"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/AllDisjointProperties",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Annotation",
+      "definition_uri": "https://w3id.org/None/Annotation",
+      "comments": [
+        "The class of annotated annotations for which the RDF serialization consists of an annotated subject, predicate and object."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:Annotation"
+      ],
+      "is_a": "Resource",
+      "slots": [
+        "annotatedProperty",
+        "annotatedSource",
+        "annotatedTarget",
+        "members"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/Annotation",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AnnotationProperty",
+      "definition_uri": "https://w3id.org/None/AnnotationProperty",
+      "comments": [
+        "The class of annotation properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:AnnotationProperty"
+      ],
+      "is_a": "Property",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/AnnotationProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AsymmetricProperty",
+      "definition_uri": "https://w3id.org/None/AsymmetricProperty",
+      "comments": [
+        "The class of asymmetric properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:AsymmetricProperty"
+      ],
+      "is_a": "ObjectProperty",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith",
+        "inverseOf",
+        "propertyChainAxiom"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/AsymmetricProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Axiom",
+      "definition_uri": "https://w3id.org/None/Axiom",
+      "comments": [
+        "The class of annotated axioms for which the RDF serialization consists of an annotated subject, predicate and object."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:Axiom"
+      ],
+      "is_a": "Resource",
+      "slots": [
+        "annotatedProperty",
+        "annotatedSource",
+        "annotatedTarget",
+        "members"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/Axiom",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Class",
+      "definition_uri": "https://w3id.org/None/Class",
+      "comments": [
+        "The class of OWL classes."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:Class"
+      ],
+      "slots": [
+        "complementOf",
+        "disjointUnionOf",
+        "disjointWith",
+        "equivalentClass",
+        "hasKey",
+        "intersectionOf",
+        "oneOf",
+        "unionOf"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/Class",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DataRange",
+      "definition_uri": "https://w3id.org/None/DataRange",
+      "comments": [
+        "The class of OWL data ranges, which are special kinds of datatypes. Note: The use of the IRI owl:DataRange has been deprecated as of OWL 2. The IRI rdfs:Datatype SHOULD be used instead."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:DataRange"
+      ],
+      "is_a": "Datatype",
+      "slots": [
+        "datatypeComplementOf",
+        "onDatatype",
+        "withRestrictions"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/DataRange",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DatatypeProperty",
+      "definition_uri": "https://w3id.org/None/DatatypeProperty",
+      "comments": [
+        "The class of data properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:DatatypeProperty"
+      ],
+      "is_a": "Property",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/DatatypeProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DeprecatedClass",
+      "definition_uri": "https://w3id.org/None/DeprecatedClass",
+      "comments": [
+        "The class of deprecated classes."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:DeprecatedClass"
+      ],
+      "is_a": "Class",
+      "slots": [
+        "complementOf",
+        "disjointUnionOf",
+        "disjointWith",
+        "equivalentClass",
+        "hasKey",
+        "intersectionOf",
+        "oneOf",
+        "unionOf"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/DeprecatedClass",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DeprecatedProperty",
+      "definition_uri": "https://w3id.org/None/DeprecatedProperty",
+      "comments": [
+        "The class of deprecated properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:DeprecatedProperty"
+      ],
+      "is_a": "Property",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/DeprecatedProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "FunctionalProperty",
+      "definition_uri": "https://w3id.org/None/FunctionalProperty",
+      "comments": [
+        "The class of functional properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:FunctionalProperty"
+      ],
+      "is_a": "Property",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/FunctionalProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "InverseFunctionalProperty",
+      "definition_uri": "https://w3id.org/None/InverseFunctionalProperty",
+      "comments": [
+        "The class of inverse-functional properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:InverseFunctionalProperty"
+      ],
+      "is_a": "ObjectProperty",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith",
+        "inverseOf",
+        "propertyChainAxiom"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/InverseFunctionalProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "IrreflexiveProperty",
+      "definition_uri": "https://w3id.org/None/IrreflexiveProperty",
+      "comments": [
+        "The class of irreflexive properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:IrreflexiveProperty"
+      ],
+      "is_a": "ObjectProperty",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith",
+        "inverseOf",
+        "propertyChainAxiom"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/IrreflexiveProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NamedIndividual",
+      "definition_uri": "https://w3id.org/None/NamedIndividual",
+      "comments": [
+        "The class of named individuals."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:NamedIndividual"
+      ],
+      "is_a": "Thing",
+      "slots": [
+        "bottomObjectProperty",
+        "differentFrom",
+        "sameAs",
+        "topObjectProperty",
+        "bottomDataProperty",
+        "topDataProperty"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/NamedIndividual",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NegativePropertyAssertion",
+      "definition_uri": "https://w3id.org/None/NegativePropertyAssertion",
+      "comments": [
+        "The class of negative property assertions."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:NegativePropertyAssertion"
+      ],
+      "is_a": "Resource",
+      "slots": [
+        "annotatedProperty",
+        "annotatedSource",
+        "annotatedTarget",
+        "members",
+        "assertionProperty",
+        "sourceIndividual",
+        "targetIndividual",
+        "targetValue"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/NegativePropertyAssertion",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Nothing",
+      "definition_uri": "https://w3id.org/None/Nothing",
+      "comments": [
+        "This is the empty class."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:Nothing"
+      ],
+      "is_a": "Thing",
+      "slots": [
+        "bottomObjectProperty",
+        "differentFrom",
+        "sameAs",
+        "topObjectProperty",
+        "bottomDataProperty",
+        "topDataProperty"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/Nothing",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ObjectProperty",
+      "definition_uri": "https://w3id.org/None/ObjectProperty",
+      "comments": [
+        "The class of object properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:ObjectProperty"
+      ],
+      "is_a": "Property",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith",
+        "inverseOf",
+        "propertyChainAxiom"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/ObjectProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Ontology",
+      "definition_uri": "https://w3id.org/None/Ontology",
+      "comments": [
+        "The class of ontologies."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:Ontology"
+      ],
+      "is_a": "Resource",
+      "slots": [
+        "annotatedProperty",
+        "annotatedSource",
+        "annotatedTarget",
+        "members"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/Ontology",
+      "tree_root": true,
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OntologyProperty",
+      "definition_uri": "https://w3id.org/None/OntologyProperty",
+      "comments": [
+        "The class of ontology properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:OntologyProperty"
+      ],
+      "is_a": "Property",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/OntologyProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ReflexiveProperty",
+      "definition_uri": "https://w3id.org/None/ReflexiveProperty",
+      "comments": [
+        "The class of reflexive properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:ReflexiveProperty"
+      ],
+      "is_a": "ObjectProperty",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith",
+        "inverseOf",
+        "propertyChainAxiom"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/ReflexiveProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Restriction",
+      "definition_uri": "https://w3id.org/None/Restriction",
+      "comments": [
+        "The class of property restrictions."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:Restriction"
+      ],
+      "is_a": "Class",
+      "slots": [
+        "complementOf",
+        "disjointUnionOf",
+        "disjointWith",
+        "equivalentClass",
+        "hasKey",
+        "intersectionOf",
+        "oneOf",
+        "unionOf",
+        "allValuesFrom",
+        "hasSelf",
+        "hasValue",
+        "onClass",
+        "onDataRange",
+        "onProperties",
+        "onProperty",
+        "someValuesFrom",
+        "cardinality",
+        "maxCardinality",
+        "maxQualifiedCardinality",
+        "minCardinality",
+        "minQualifiedCardinality",
+        "qualifiedCardinality"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/Restriction",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SymmetricProperty",
+      "definition_uri": "https://w3id.org/None/SymmetricProperty",
+      "comments": [
+        "The class of symmetric properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:SymmetricProperty"
+      ],
+      "is_a": "ObjectProperty",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith",
+        "inverseOf",
+        "propertyChainAxiom"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/SymmetricProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Thing",
+      "definition_uri": "https://w3id.org/None/Thing",
+      "comments": [
+        "The class of OWL individuals."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:Thing"
+      ],
+      "slots": [
+        "bottomObjectProperty",
+        "differentFrom",
+        "sameAs",
+        "topObjectProperty",
+        "bottomDataProperty",
+        "topDataProperty"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/Thing",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TransitiveProperty",
+      "definition_uri": "https://w3id.org/None/TransitiveProperty",
+      "comments": [
+        "The class of transitive properties."
+      ],
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "mappings": [
+        "owl:TransitiveProperty"
+      ],
+      "is_a": "ObjectProperty",
+      "slots": [
+        "equivalentProperty",
+        "propertyDisjointWith",
+        "inverseOf",
+        "propertyChainAxiom"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/TransitiveProperty",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Resource",
+      "definition_uri": "https://w3id.org/None/Resource",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "slots": [
+        "annotatedProperty",
+        "annotatedSource",
+        "annotatedTarget",
+        "members"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/Resource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Datatype",
+      "definition_uri": "https://w3id.org/None/Datatype",
+      "from_schema": "http://www.w3.org/2002/07/owl",
+      "slots": [
+        "datatypeComplementOf",
+        "onDatatype",
+        "withRestrictions"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/None/Datatype",
+      "@type": "ClassDefinition"
+    }
+  ],
+  "metamodel_version": "1.7.0",
+  "source_file": "owl_schema.yaml",
+  "source_file_date": "2022-08-16T19:35:23",
+  "source_file_size": 15715,
+  "generation_date": "2022-08-16T19:36:02",
+  "@type": "SchemaDefinition",
+  "@context": [
+    "project/jsonld/owl_schema.context.jsonld",
+    "https://w3id.org/linkml/types.context.jsonld",
+    {
+      "@base": "https://w3id.org/None/"
+    }
+  ]
+}

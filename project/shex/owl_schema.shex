@@ -1,0 +1,331 @@
+BASE <https://w3id.org/None/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX rdf1: <http://example.org/UNKNOWN/rdf/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:dateTime
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+<AllDifferent> CLOSED {
+    (  $<AllDifferent_tes> (  &<Resource_tes> ;
+          rdf:type [ <Resource> ] ? ;
+          <distinctMembers> @<List> *
+       ) ;
+       rdf:type [ <AllDifferent> ] ?
+    )
+}
+
+<AllDisjointClasses> CLOSED {
+    (  $<AllDisjointClasses_tes> (  &<Resource_tes> ;
+          rdf:type [ <Resource> ] ?
+       ) ;
+       rdf:type [ <AllDisjointClasses> ] ?
+    )
+}
+
+<AllDisjointProperties> CLOSED {
+    (  $<AllDisjointProperties_tes> (  &<Resource_tes> ;
+          rdf:type [ <Resource> ] ?
+       ) ;
+       rdf:type [ <AllDisjointProperties> ] ?
+    )
+}
+
+<Annotation> CLOSED {
+    (  $<Annotation_tes> (  &<Resource_tes> ;
+          rdf:type [ <Resource> ] ?
+       ) ;
+       rdf:type [ <Annotation> ] ?
+    )
+}
+
+<AnnotationProperty> CLOSED {
+    (  $<AnnotationProperty_tes> (  &<Property_tes> ;
+          rdf:type [ rdf1:Property ] ?
+       ) ;
+       rdf:type [ <AnnotationProperty> ] ?
+    )
+}
+
+<AsymmetricProperty> CLOSED {
+    (  $<AsymmetricProperty_tes> (  &<ObjectProperty_tes> ;
+          rdf:type [ <ObjectProperty> ] ?
+       ) ;
+       rdf:type [ <AsymmetricProperty> ] ?
+    )
+}
+
+<Axiom> CLOSED {
+    (  $<Axiom_tes> (  &<Resource_tes> ;
+          rdf:type [ <Resource> ] ?
+       ) ;
+       rdf:type [ <Axiom> ] ?
+    )
+}
+
+<Class>  (
+    CLOSED {
+       (  $<Class_tes> (  <complementOf> @<Class> * ;
+             <disjointUnionOf> @<List> * ;
+             <disjointWith> @<Class> * ;
+             <equivalentClass> @<Class> * ;
+             <hasKey> @<List> * ;
+             <intersectionOf> @<List> * ;
+             <oneOf> @<List> * ;
+             <unionOf> @<List> *
+          ) ;
+          rdf:type [ <Class> ] ?
+       )
+    } OR @<DeprecatedClass> OR @<Restriction>
+)
+
+<DataRange> CLOSED {
+    (  $<DataRange_tes> (  &<Datatype_tes> ;
+          rdf:type [ <Datatype> ] ?
+       ) ;
+       rdf:type [ <DataRange> ] ?
+    )
+}
+
+<Datatype>  (
+    CLOSED {
+       (  $<Datatype_tes> (  <datatypeComplementOf> @<Datatype> * ;
+             <onDatatype> @<Datatype> * ;
+             <withRestrictions> @<List> *
+          ) ;
+          rdf:type [ <Datatype> ] ?
+       )
+    } OR @<DataRange>
+)
+
+<DatatypeProperty> CLOSED {
+    (  $<DatatypeProperty_tes> (  &<Property_tes> ;
+          rdf:type [ rdf1:Property ] ?
+       ) ;
+       rdf:type [ <DatatypeProperty> ] ?
+    )
+}
+
+<DeprecatedClass> CLOSED {
+    (  $<DeprecatedClass_tes> (  &<Class_tes> ;
+          rdf:type [ <Class> ] ?
+       ) ;
+       rdf:type [ <DeprecatedClass> ] ?
+    )
+}
+
+<DeprecatedProperty> CLOSED {
+    (  $<DeprecatedProperty_tes> (  &<Property_tes> ;
+          rdf:type [ rdf1:Property ] ?
+       ) ;
+       rdf:type [ <DeprecatedProperty> ] ?
+    )
+}
+
+<FunctionalProperty> CLOSED {
+    (  $<FunctionalProperty_tes> (  &<Property_tes> ;
+          rdf:type [ rdf1:Property ] ?
+       ) ;
+       rdf:type [ <FunctionalProperty> ] ?
+    )
+}
+
+<InverseFunctionalProperty> CLOSED {
+    (  $<InverseFunctionalProperty_tes> (  &<ObjectProperty_tes> ;
+          rdf:type [ <ObjectProperty> ] ?
+       ) ;
+       rdf:type [ <InverseFunctionalProperty> ] ?
+    )
+}
+
+<IrreflexiveProperty> CLOSED {
+    (  $<IrreflexiveProperty_tes> (  &<ObjectProperty_tes> ;
+          rdf:type [ <ObjectProperty> ] ?
+       ) ;
+       rdf:type [ <IrreflexiveProperty> ] ?
+    )
+}
+
+<List> CLOSED {
+    (  $<List_tes> rdf:type . * ;
+       rdf:type [ rdf1:List ] ?
+    )
+}
+
+<Literal> CLOSED {
+    (  $<Literal_tes> rdf:type . * ;
+       rdf:type [ rdf1:Literal ] ?
+    )
+}
+
+<NamedIndividual> CLOSED {
+    (  $<NamedIndividual_tes> (  &<Thing_tes> ;
+          rdf:type [ <Thing> ] ?
+       ) ;
+       rdf:type [ <NamedIndividual> ] ?
+    )
+}
+
+<NegativePropertyAssertion> CLOSED {
+    (  $<NegativePropertyAssertion_tes> (  &<Resource_tes> ;
+          rdf:type [ <Resource> ] ? ;
+          <assertionProperty> @<Property> * ;
+          <sourceIndividual> @<Thing> * ;
+          <targetIndividual> @<Thing> * ;
+          <targetValue> @<Literal> *
+       ) ;
+       rdf:type [ <NegativePropertyAssertion> ] ?
+    )
+}
+
+<Nothing> CLOSED {
+    (  $<Nothing_tes> (  &<Thing_tes> ;
+          rdf:type [ <Thing> ] ?
+       ) ;
+       rdf:type [ <Nothing> ] ?
+    )
+}
+
+<ObjectProperty>  (
+    CLOSED {
+       (  $<ObjectProperty_tes> (  &<Property_tes> ;
+             rdf:type [ rdf1:Property ] ? ;
+             <inverseOf> @<ObjectProperty> * ;
+             <propertyChainAxiom> @<List> *
+          ) ;
+          rdf:type [ <ObjectProperty> ] ?
+       )
+    } OR @<AsymmetricProperty> OR @<InverseFunctionalProperty> OR @<IrreflexiveProperty> OR @<ReflexiveProperty> OR
+    @<SymmetricProperty> OR @<TransitiveProperty>
+)
+
+<Ontology> CLOSED {
+    (  $<Ontology_tes> (  &<Resource_tes> ;
+          rdf:type [ <Resource> ] ?
+       ) ;
+       rdf:type [ <Ontology> ] ?
+    )
+}
+
+<OntologyProperty> CLOSED {
+    (  $<OntologyProperty_tes> (  &<Property_tes> ;
+          rdf:type [ rdf1:Property ] ?
+       ) ;
+       rdf:type [ <OntologyProperty> ] ?
+    )
+}
+
+<Property>  (
+    CLOSED {
+       (  $<Property_tes> (  <equivalentProperty> @<Property> * ;
+             <propertyDisjointWith> @<Property> *
+          ) ;
+          rdf:type [ rdf1:Property ] ?
+       )
+    } OR @<AnnotationProperty> OR @<DatatypeProperty> OR @<DeprecatedProperty> OR @<FunctionalProperty> OR @<ObjectProperty> OR
+    @<OntologyProperty>
+)
+
+<ReflexiveProperty> CLOSED {
+    (  $<ReflexiveProperty_tes> (  &<ObjectProperty_tes> ;
+          rdf:type [ <ObjectProperty> ] ?
+       ) ;
+       rdf:type [ <ReflexiveProperty> ] ?
+    )
+}
+
+<Resource>  (
+    CLOSED {
+       (  $<Resource_tes> (  <annotatedProperty> @<Resource> * ;
+             <annotatedSource> @<Resource> * ;
+             <annotatedTarget> @<Resource> * ;
+             <members> @<List> *
+          ) ;
+          rdf:type [ <Resource> ] ?
+       )
+    } OR @<AllDifferent> OR @<AllDisjointClasses> OR @<AllDisjointProperties> OR @<Annotation> OR @<Axiom> OR
+    @<NegativePropertyAssertion> OR @<Ontology>
+)
+
+<Restriction> CLOSED {
+    (  $<Restriction_tes> (  &<Class_tes> ;
+          rdf:type [ <Class> ] ? ;
+          <allValuesFrom> @<Class> * ;
+          <hasSelf> @<Resource> * ;
+          <hasValue> @<Resource> * ;
+          <onClass> @<Class> * ;
+          <onDataRange> @<Datatype> * ;
+          <onProperties> @<List> * ;
+          <onProperty> @<Property> * ;
+          <someValuesFrom> @<Class> * ;
+          <cardinality> @linkml:String * ;
+          <maxCardinality> @linkml:String * ;
+          <maxQualifiedCardinality> @linkml:String * ;
+          <minCardinality> @linkml:String * ;
+          <minQualifiedCardinality> @linkml:String * ;
+          <qualifiedCardinality> @linkml:String *
+       ) ;
+       rdf:type [ <Restriction> ] ?
+    )
+}
+
+<SymmetricProperty> CLOSED {
+    (  $<SymmetricProperty_tes> (  &<ObjectProperty_tes> ;
+          rdf:type [ <ObjectProperty> ] ?
+       ) ;
+       rdf:type [ <SymmetricProperty> ] ?
+    )
+}
+
+<Thing>  (
+    CLOSED {
+       (  $<Thing_tes> (  <bottomObjectProperty> @<Thing> * ;
+             <differentFrom> @<Thing> * ;
+             <sameAs> @<Thing> * ;
+             <topObjectProperty> @<Thing> * ;
+             <bottomDataProperty> @linkml:String * ;
+             <topDataProperty> @linkml:String *
+          ) ;
+          rdf:type [ <Thing> ] ?
+       )
+    } OR @<NamedIndividual> OR @<Nothing>
+)
+
+<TransitiveProperty> CLOSED {
+    (  $<TransitiveProperty_tes> (  &<ObjectProperty_tes> ;
+          rdf:type [ <ObjectProperty> ] ?
+       ) ;
+       rdf:type [ <TransitiveProperty> ] ?
+    )
+}
+
+

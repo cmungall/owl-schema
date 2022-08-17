@@ -1,0 +1,226 @@
+message AllDifferent
+ {
+ repeated  resource annotatedProperty = 0
+ repeated  resource annotatedSource = 0
+ repeated  resource annotatedTarget = 0
+ repeated  list members = 0
+ repeated  list distinctMembers = 0
+ }
+message AllDisjointClasses
+ {
+ repeated  resource annotatedProperty = 0
+ repeated  resource annotatedSource = 0
+ repeated  resource annotatedTarget = 0
+ repeated  list members = 0
+ }
+message AllDisjointProperties
+ {
+ repeated  resource annotatedProperty = 0
+ repeated  resource annotatedSource = 0
+ repeated  resource annotatedTarget = 0
+ repeated  list members = 0
+ }
+message Annotation
+ {
+ repeated  resource annotatedProperty = 0
+ repeated  resource annotatedSource = 0
+ repeated  resource annotatedTarget = 0
+ repeated  list members = 0
+ }
+message AnnotationProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ }
+message AsymmetricProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ repeated  objectProperty inverseOf = 0
+ repeated  list propertyChainAxiom = 0
+ }
+message Axiom
+ {
+ repeated  resource annotatedProperty = 0
+ repeated  resource annotatedSource = 0
+ repeated  resource annotatedTarget = 0
+ repeated  list members = 0
+ }
+message Class
+ {
+ repeated  class complementOf = 0
+ repeated  list disjointUnionOf = 0
+ repeated  class disjointWith = 0
+ repeated  class equivalentClass = 0
+ repeated  list hasKey = 0
+ repeated  list intersectionOf = 0
+ repeated  list oneOf = 0
+ repeated  list unionOf = 0
+ }
+message DataRange
+ {
+ repeated  datatype datatypeComplementOf = 0
+ repeated  datatype onDatatype = 0
+ repeated  list withRestrictions = 0
+ }
+message Datatype
+ {
+ repeated  datatype datatypeComplementOf = 0
+ repeated  datatype onDatatype = 0
+ repeated  list withRestrictions = 0
+ }
+message DatatypeProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ }
+message DeprecatedClass
+ {
+ repeated  class complementOf = 0
+ repeated  list disjointUnionOf = 0
+ repeated  class disjointWith = 0
+ repeated  class equivalentClass = 0
+ repeated  list hasKey = 0
+ repeated  list intersectionOf = 0
+ repeated  list oneOf = 0
+ repeated  list unionOf = 0
+ }
+message DeprecatedProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ }
+message FunctionalProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ }
+message InverseFunctionalProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ repeated  objectProperty inverseOf = 0
+ repeated  list propertyChainAxiom = 0
+ }
+message IrreflexiveProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ repeated  objectProperty inverseOf = 0
+ repeated  list propertyChainAxiom = 0
+ }
+message NamedIndividual
+ {
+ repeated  thing bottomObjectProperty = 0
+ repeated  thing differentFrom = 0
+ repeated  thing sameAs = 0
+ repeated  thing topObjectProperty = 0
+ repeated  string bottomDataProperty = 0
+ repeated  string topDataProperty = 0
+ }
+message NegativePropertyAssertion
+ {
+ repeated  resource annotatedProperty = 0
+ repeated  resource annotatedSource = 0
+ repeated  resource annotatedTarget = 0
+ repeated  list members = 0
+ repeated  property assertionProperty = 0
+ repeated  thing sourceIndividual = 0
+ repeated  thing targetIndividual = 0
+ repeated  literal targetValue = 0
+ }
+message Nothing
+ {
+ repeated  thing bottomObjectProperty = 0
+ repeated  thing differentFrom = 0
+ repeated  thing sameAs = 0
+ repeated  thing topObjectProperty = 0
+ repeated  string bottomDataProperty = 0
+ repeated  string topDataProperty = 0
+ }
+message ObjectProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ repeated  objectProperty inverseOf = 0
+ repeated  list propertyChainAxiom = 0
+ }
+message Ontology
+ {
+ repeated  resource annotatedProperty = 0
+ repeated  resource annotatedSource = 0
+ repeated  resource annotatedTarget = 0
+ repeated  list members = 0
+ }
+message OntologyProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ }
+message Property
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ }
+message ReflexiveProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ repeated  objectProperty inverseOf = 0
+ repeated  list propertyChainAxiom = 0
+ }
+message Resource
+ {
+ repeated  resource annotatedProperty = 0
+ repeated  resource annotatedSource = 0
+ repeated  resource annotatedTarget = 0
+ repeated  list members = 0
+ }
+message Restriction
+ {
+ repeated  class complementOf = 0
+ repeated  list disjointUnionOf = 0
+ repeated  class disjointWith = 0
+ repeated  class equivalentClass = 0
+ repeated  list hasKey = 0
+ repeated  list intersectionOf = 0
+ repeated  list oneOf = 0
+ repeated  list unionOf = 0
+ repeated  class allValuesFrom = 0
+ repeated  resource hasSelf = 0
+ repeated  resource hasValue = 0
+ repeated  class onClass = 0
+ repeated  datatype onDataRange = 0
+ repeated  list onProperties = 0
+ repeated  property onProperty = 0
+ repeated  class someValuesFrom = 0
+ repeated  string cardinality = 0
+ repeated  string maxCardinality = 0
+ repeated  string maxQualifiedCardinality = 0
+ repeated  string minCardinality = 0
+ repeated  string minQualifiedCardinality = 0
+ repeated  string qualifiedCardinality = 0
+ }
+message SymmetricProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ repeated  objectProperty inverseOf = 0
+ repeated  list propertyChainAxiom = 0
+ }
+message Thing
+ {
+ repeated  thing bottomObjectProperty = 0
+ repeated  thing differentFrom = 0
+ repeated  thing sameAs = 0
+ repeated  thing topObjectProperty = 0
+ repeated  string bottomDataProperty = 0
+ repeated  string topDataProperty = 0
+ }
+message TransitiveProperty
+ {
+ repeated  property equivalentProperty = 0
+ repeated  property propertyDisjointWith = 0
+ repeated  objectProperty inverseOf = 0
+ repeated  list propertyChainAxiom = 0
+ }
