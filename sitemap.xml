@@ -1,467 +1,467 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://my-org.github.io/my-datamodel/</loc>
+         <loc>https://cmungall.github.io/owl-schema/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/AllDifferent/</loc>
+         <loc>https://cmungall.github.io/owl-schema/AllDifferent/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/AllDisjointClasses/</loc>
+         <loc>https://cmungall.github.io/owl-schema/AllDisjointClasses/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/AllDisjointProperties/</loc>
+         <loc>https://cmungall.github.io/owl-schema/AllDisjointProperties/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Annotation/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Annotation/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/AnnotationProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/AnnotationProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/AsymmetricProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/AsymmetricProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Axiom/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Axiom/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Class/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Class/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/DataRange/</loc>
+         <loc>https://cmungall.github.io/owl-schema/DataRange/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Datatype/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Datatype/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/DatatypeProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/DatatypeProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/DeprecatedClass/</loc>
+         <loc>https://cmungall.github.io/owl-schema/DeprecatedClass/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/DeprecatedProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/DeprecatedProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/FunctionalProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/FunctionalProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/InverseFunctionalProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/InverseFunctionalProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/IrreflexiveProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/IrreflexiveProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/List/</loc>
+         <loc>https://cmungall.github.io/owl-schema/List/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Literal/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Literal/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/NamedIndividual/</loc>
+         <loc>https://cmungall.github.io/owl-schema/NamedIndividual/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/NegativePropertyAssertion/</loc>
+         <loc>https://cmungall.github.io/owl-schema/NegativePropertyAssertion/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Nothing/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Nothing/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/ObjectProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/ObjectProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Ontology/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Ontology/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/OntologyProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/OntologyProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Property/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Property/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/ReflexiveProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/ReflexiveProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Resource/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Resource/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Restriction/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Restriction/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/SymmetricProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/SymmetricProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/Thing/</loc>
+         <loc>https://cmungall.github.io/owl-schema/Thing/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/TransitiveProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/TransitiveProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/about/</loc>
+         <loc>https://cmungall.github.io/owl-schema/about/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/allValuesFrom/</loc>
+         <loc>https://cmungall.github.io/owl-schema/allValuesFrom/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/annotatedProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/annotatedProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/annotatedSource/</loc>
+         <loc>https://cmungall.github.io/owl-schema/annotatedSource/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/annotatedTarget/</loc>
+         <loc>https://cmungall.github.io/owl-schema/annotatedTarget/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/assertionProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/assertionProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/backwardCompatibleWith/</loc>
+         <loc>https://cmungall.github.io/owl-schema/backwardCompatibleWith/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/bottomDataProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/bottomDataProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/bottomObjectProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/bottomObjectProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/cardinality/</loc>
+         <loc>https://cmungall.github.io/owl-schema/cardinality/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/complementOf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/complementOf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/datatypeComplementOf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/datatypeComplementOf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/deprecated/</loc>
+         <loc>https://cmungall.github.io/owl-schema/deprecated/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/differentFrom/</loc>
+         <loc>https://cmungall.github.io/owl-schema/differentFrom/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/disjointUnionOf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/disjointUnionOf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/disjointWith/</loc>
+         <loc>https://cmungall.github.io/owl-schema/disjointWith/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/distinctMembers/</loc>
+         <loc>https://cmungall.github.io/owl-schema/distinctMembers/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/domain/</loc>
+         <loc>https://cmungall.github.io/owl-schema/domain/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/equivalentClass/</loc>
+         <loc>https://cmungall.github.io/owl-schema/equivalentClass/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/equivalentProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/equivalentProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/hasKey/</loc>
+         <loc>https://cmungall.github.io/owl-schema/hasKey/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/hasSelf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/hasSelf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/hasValue/</loc>
+         <loc>https://cmungall.github.io/owl-schema/hasValue/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/imports/</loc>
+         <loc>https://cmungall.github.io/owl-schema/imports/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/incompatibleWith/</loc>
+         <loc>https://cmungall.github.io/owl-schema/incompatibleWith/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/intersectionOf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/intersectionOf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/inverseOf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/inverseOf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/maxCardinality/</loc>
+         <loc>https://cmungall.github.io/owl-schema/maxCardinality/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/maxQualifiedCardinality/</loc>
+         <loc>https://cmungall.github.io/owl-schema/maxQualifiedCardinality/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/member/</loc>
+         <loc>https://cmungall.github.io/owl-schema/member/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/members/</loc>
+         <loc>https://cmungall.github.io/owl-schema/members/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/minCardinality/</loc>
+         <loc>https://cmungall.github.io/owl-schema/minCardinality/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/minQualifiedCardinality/</loc>
+         <loc>https://cmungall.github.io/owl-schema/minQualifiedCardinality/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/namespaceTransformation/</loc>
+         <loc>https://cmungall.github.io/owl-schema/namespaceTransformation/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/onClass/</loc>
+         <loc>https://cmungall.github.io/owl-schema/onClass/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/onDataRange/</loc>
+         <loc>https://cmungall.github.io/owl-schema/onDataRange/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/onDatatype/</loc>
+         <loc>https://cmungall.github.io/owl-schema/onDatatype/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/onProperties/</loc>
+         <loc>https://cmungall.github.io/owl-schema/onProperties/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/onProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/onProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/oneOf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/oneOf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/owl/</loc>
+         <loc>https://cmungall.github.io/owl-schema/owl/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/priorVersion/</loc>
+         <loc>https://cmungall.github.io/owl-schema/priorVersion/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/propertyChainAxiom/</loc>
+         <loc>https://cmungall.github.io/owl-schema/propertyChainAxiom/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/propertyDisjointWith/</loc>
+         <loc>https://cmungall.github.io/owl-schema/propertyDisjointWith/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/qualifiedCardinality/</loc>
+         <loc>https://cmungall.github.io/owl-schema/qualifiedCardinality/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/range/</loc>
+         <loc>https://cmungall.github.io/owl-schema/range/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/sameAs/</loc>
+         <loc>https://cmungall.github.io/owl-schema/sameAs/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/someValuesFrom/</loc>
+         <loc>https://cmungall.github.io/owl-schema/someValuesFrom/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/sourceIndividual/</loc>
+         <loc>https://cmungall.github.io/owl-schema/sourceIndividual/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/subClassOf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/subClassOf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/subPropertyOf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/subPropertyOf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/targetIndividual/</loc>
+         <loc>https://cmungall.github.io/owl-schema/targetIndividual/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/targetValue/</loc>
+         <loc>https://cmungall.github.io/owl-schema/targetValue/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/title/</loc>
+         <loc>https://cmungall.github.io/owl-schema/title/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/topDataProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/topDataProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/topObjectProperty/</loc>
+         <loc>https://cmungall.github.io/owl-schema/topObjectProperty/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/types/</loc>
+         <loc>https://cmungall.github.io/owl-schema/types/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/unionOf/</loc>
+         <loc>https://cmungall.github.io/owl-schema/unionOf/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/versionIRI/</loc>
+         <loc>https://cmungall.github.io/owl-schema/versionIRI/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/versionInfo/</loc>
+         <loc>https://cmungall.github.io/owl-schema/versionInfo/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://my-org.github.io/my-datamodel/withRestrictions/</loc>
+         <loc>https://cmungall.github.io/owl-schema/withRestrictions/</loc>
          <lastmod>2022-08-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
